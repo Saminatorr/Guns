@@ -1,0 +1,77 @@
+﻿#fixed-menu {
+    /*dussss een div er rond zetten en dan die fixed zetten en de inner ul relative en dan centerern*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    z-index: 70;
+    width: 100%;
+    text-align: center;
+    h1
+    {
+        margin: 0;
+        padding: 10px 5px 5px 5px;
+        font-family: Gulim;
+        font-size: 30px;
+        font-weight: bold;
+        float: left;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    #myMenu {
+        float: left;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            list-style-type: none;
+            border: 2px solid orange;
+            border-radius: 4px;
+            margin: 5px 8px;
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#fullpage {
+
+    .section:nth-child(1) {
+        background-color: red;
+
+        .inner-content {
+            background-color: white;
+            height: 80%;
+            width: 95%;
+            margin: auto;
+
+            img
+            {
+                height: 100%;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+
+    .section:nth-child(2) {
+        background-color: green;
+    }
+
+    .section:nth-child(3) {
+        background-color: blue;
+    }
+
+    .section:nth-child(4) {
+        background-color: yellow;
+    }
+}
+
+
