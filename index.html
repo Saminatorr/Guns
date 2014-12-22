@@ -1,62 +1,88 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Gunz</title>
-
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-    <link href="css/style.css" rel="stylesheet" />
-
+    <title>Scroll Page Test</title>
+    <link href="css/style.min.css" rel="stylesheet" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="vendors/jquery.easings.min.js"></script>
-
-    <script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 </head>
 <body>
 
-    <!-- dussss een div er rond zetten en dan die fixed zetten en de inner ul relative en dan centerern -->
-    <div id="fixed-menu">
-        <h1>
-            The history of guns
-        </h1>
-        <ul id="myMenu">
-            <li data-menuanchor="firstPage" class="active"><a href="#firstpage">First section</a></li>
-            <li data-menuanchor="secondPage"><a href="#secondpage">Second section</a></li>
-            <li data-menuanchor="thirdPage"><a href="#thirdpage">Third section</a></li>
-            <li data-menuanchor="fourthPage"><a href="#fourthpage">Fourth section</a></li>
-        </ul>
+    <div id="FixedMenu">
+
+        <h1 id="HomeButton">History of Guns</h1>
+
+        <span class="button" id="Button1">1300</span>
+        <span class="button" id="Button2">1400</span>
+        <span class="button" id="Button3">1500</span>
+        <span class="button" id="Button4">1600</span>
+        <span class="button" id="Button5">1700</span>
+        <span class="button" id="Button6">1800</span>
+        <span class="button" id="Button7">1900</span>
+        <span class="button" id="Button8">2000</span>
     </div>
 
+    <div id="ContentWrapper">
+        <div class="Sections" id="Section1">
+            <div id="InnerSection1">
+                <section class="ContentBox">
+                    <section id="left-side">
+                        <img src="images/firing_gun.png" />
 
-    <div id="fullpage">
-        <div class="section" data-anchor="firstpage">
-            <div class="inner-content">
-                <img src="images/ShootingHouseTest2.png" />
+                        <h3>Guns</h3>
+                        <p>
+                            Guns. They are fascinating right? Over 75 people per 100 have a gun in America.
+                            That means more then 270 million civilians have a fire arm. Each year they have approximately 31.000 gun incidents where
+                            many people have been attacked by some kind of pistol. But where do guns come from? What are their roots?
+
+                        </p>
+
+                    </section>
+                    <section id="right-side">
+                        <img src="images/time.png" />
+                        <h3>History</h3>
+                        <p>
+                            That's why I want to go back in to time.
+                            Let's find out how they invented guns and how they became so powerfull.
+                            Let's go back and see who invented the bullet blazing machine.
+                            Just click the date above and enjoy your journey!
+                        </p>
+                    </section>
+                </section>
             </div>
         </div>
-        <div class="section" data-anchor="secondpage">
-            <div class="inner-content">
-                Test lol
+
+        <div class="Sections" id="Section2">
+            <div id="InnerSection2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend nibh at nibh eleifend commodo eget sed urna. Cras hendrerit metus et nisl blandit, eu semper turpis molestie. Mauris iaculis fermentum diam. Mauris aliquam orci sit amet imperdiet placerat. Integer vitae dui nulla. In nec lobortis magna. Nam eu nulla at lectus semper ultricies eget nec dui. Morbi vestibulum pharetra purus ac dictum. Praesent orci enim, pretium eget porta quis, feugiat eget ex. Mauris congue libero quam, eu suscipit quam pharetra porta.
+
+                Duis luctus ligula at erat malesuada vehicula. Pellentesque vulputate dolor eget elit sodales, eu posuere libero ultricies. Maecenas at eros risus. Etiam eu turpis et orci congue condimentum. Aenean turpis nisl, faucibus ut nulla sed, consectetur porta purus. Phasellus feugiat accumsan sapien. Mauris tempus, tortor quis feugiat tincidunt, lacus dui dictum felis, sit amet rutrum lacus purus eu ligula. Vivamus tempor metus molestie nisl sollicitudin volutpat eget ut neque. Etiam hendrerit, leo ut finibus egestas, nibh lacus finibus lorem, eu ornare est sem nec ante. Maecenas ultrices elementum tempus. Curabitur ullamcorper quam blandit, suscipit leo vel, euismod diam. Donec tristique magna ac tristique dapibus.
+
+                In vulputate neque vitae iaculis commodo. Morbi at lacus turpis. Morbi fermentum ex nec condimentum placerat. Phasellus fermentum sit amet nulla sit amet molestie. Sed efficitur est fringilla velit molestie tincidunt. Vivamus sed lacus eget ligula pretium sodales. Maecenas fermentum nunc rhoncus odio rhoncus, vitae pellentesque mi egestas. Vestibulum sagittis tellus dolor. Integer et auctor velit. Ut hendrerit vitae lorem ut efficitur. Vivamus eleifend auctor justo. Curabitur ornare aliquam lectus eget venenatis.
+
+                Vivamus nunc nibh, condimentum mattis leo ut, commodo finibus ex. Suspendisse auctor, justo quis pellentesque tempus, ex turpis pulvinar nisi, et tincidunt libero diam in ex. Phasellus semper vehicula orci. Morbi lobortis dapibus tortor, ultrices ornare diam pulvinar auctor. Sed venenatis porta fringilla. In dictum vitae eros non blandit. Etiam tincidunt tempor justo et egestas. Morbi vitae dui vitae nulla bibendum malesuada ut a odio.
+
+                Cras a ipsum tortor. Vivamus pulvinar varius scelerisque. Proin sem urna, ultrices ac nibh sed, laoreet luctus massa. Aliquam a tellus maximus, gravida lacus eget, ornare neque. Proin eu nunc nec elit dapibus lobortis ac sit amet mi. Integer mollis lacus eu augue mollis, eleifend ullamcorper dolor accumsan. Integer et mauris enim. Etiam tincidunt nec arcu id tincidunt. Donec aliquet sem enim, sit amet porta metus congue vel. Aliquam ultrices, tortor eu eleifend fermentum, dui dolor aliquet nisl, in pulvinar nunc odio at metus.
             </div>
         </div>
-        <div class="section" data-anchor="thirdpage">
-            <div class="inner-content">
-                Test lol
-            </div>
-        </div>
-        <div class="section" data-anchor="fourthpage">
-            <div class="inner-content">
-                Test lol
+
+        <div class="Sections" id="Section3">
+            <div id="InnerSection3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend nibh at nibh eleifend commodo eget sed urna. Cras hendrerit metus et nisl blandit, eu semper turpis molestie. Mauris iaculis fermentum diam. Mauris aliquam orci sit amet imperdiet placerat. Integer vitae dui nulla. In nec lobortis magna. Nam eu nulla at lectus semper ultricies eget nec dui. Morbi vestibulum pharetra purus ac dictum. Praesent orci enim, pretium eget porta quis, feugiat eget ex. Mauris congue libero quam, eu suscipit quam pharetra porta.
+
+                Duis luctus ligula at erat malesuada vehicula. Pellentesque vulputate dolor eget elit sodales, eu posuere libero ultricies. Maecenas at eros risus. Etiam eu turpis et orci congue condimentum. Aenean turpis nisl, faucibus ut nulla sed, consectetur porta purus. Phasellus feugiat accumsan sapien. Mauris tempus, tortor quis feugiat tincidunt, lacus dui dictum felis, sit amet rutrum lacus purus eu ligula. Vivamus tempor metus molestie nisl sollicitudin volutpat eget ut neque. Etiam hendrerit, leo ut finibus egestas, nibh lacus finibus lorem, eu ornare est sem nec ante. Maecenas ultrices elementum tempus. Curabitur ullamcorper quam blandit, suscipit leo vel, euismod diam. Donec tristique magna ac tristique dapibus.
+
+                In vulputate neque vitae iaculis commodo. Morbi at lacus turpis. Morbi fermentum ex nec condimentum placerat. Phasellus fermentum sit amet nulla sit amet molestie. Sed efficitur est fringilla velit molestie tincidunt. Vivamus sed lacus eget ligula pretium sodales. Maecenas fermentum nunc rhoncus odio rhoncus, vitae pellentesque mi egestas. Vestibulum sagittis tellus dolor. Integer et auctor velit. Ut hendrerit vitae lorem ut efficitur. Vivamus eleifend auctor justo. Curabitur ornare aliquam lectus eget venenatis.
+
+                Vivamus nunc nibh, condimentum mattis leo ut, commodo finibus ex. Suspendisse auctor, justo quis pellentesque tempus, ex turpis pulvinar nisi, et tincidunt libero diam in ex. Phasellus semper vehicula orci. Morbi lobortis dapibus tortor, ultrices ornare diam pulvinar auctor. Sed venenatis porta fringilla. In dictum vitae eros non blandit. Etiam tincidunt tempor justo et egestas. Morbi vitae dui vitae nulla bibendum malesuada ut a odio.
+
+                Cras a ipsum tortor. Vivamus pulvinar varius scelerisque. Proin sem urna, ultrices ac nibh sed, laoreet luctus massa. Aliquam a tellus maximus, gravida lacus eget, ornare neque. Proin eu nunc nec elit dapibus lobortis ac sit amet mi. Integer mollis lacus eu augue mollis, eleifend ullamcorper dolor accumsan. Integer et mauris enim. Etiam tincidunt nec arcu id tincidunt. Donec aliquet sem enim, sit amet porta metus congue vel. Aliquam ultrices, tortor eu eleifend fermentum, dui dolor aliquet nisl, in pulvinar nunc odio at metus.
             </div>
         </div>
     </div>
 
-    <!-- commentaar bij gedaan -->
 
 
     <script src="js/script.js"></script>
-
-    <!-- in de js file nog zorgen dat de bolletjes nav rechts weg is of goed werkt -->
 
 </body>
 </html>
