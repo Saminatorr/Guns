@@ -10,15 +10,12 @@
 
 @bluecolor: #2980b9;
 @redcolor: #e74c3c;
+@orangecolor: #ff7200;
 
 body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
-
-.ColorChange {
-    background-color: #e74c3c;
 }
 
 #FixedMenu {
@@ -35,10 +32,15 @@ body {
         font-size: 60px;
         font-family: Bullet;
         font-weight: 200;
-        margin: 10px 10px 3px 10px;
+        margin: 10px 10px 0 10px;
         padding: 0;
         z-index: 71;
         cursor: pointer;
+
+        @media screen and (max-width: 1279px), screen and (max-height: 800px) {
+            font-size: 45px;
+            margin: 5px 5px 0 5px;
+        }
     }
 
     .button {
@@ -55,6 +57,61 @@ body {
         font-family: DRIVEBY;
         text-decoration: none;
         cursor: pointer;
+
+        @media screen and (max-width: 1279px), screen and (max-height: 800px) {
+            font-size: 20px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.layout-inner-sections {
+    width: 90%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0);
+    margin: auto;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.layout-left-side {
+    float: left;
+    width: 35%;
+    height: 100%;
+    margin-left: 13%;
+    margin-right: 2%;
+    padding-top: 15px;
+    background-color: rgba(255,255,255,1);
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 2px 0 0 #e5e5e5;
+
+    @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+        height: 112%;
+        width: 40%;
+        margin-left: 8%;
+    }
+}
+
+.layout-right-side {
+    float: left;
+    width: 35%;
+    height: 100%;
+    margin-right: 13%;
+    margin-left: 2%;
+    padding-top: 15px;
+    background-color: white;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 2px 0 0 #e5e5e5;
+
+    @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+        height: 112%;
+        width: 40%;
+        margin-right: 8%;
     }
 }
 
@@ -70,35 +127,61 @@ body {
         }
 
         &:nth-child(3) {
-            background-color: black;
+            background-image: url('../images/fuse.png');
+        }
+
+        &:nth-child(4) {
+            background-image: url('../images/bullet.png');
+        }
+
+        &:nth-child(5) {
+            background-image: url('../images/flintlock4.png');
         }
 
         #InnerSection1 {
-            width: 90%;
-            height: 60%;
-            background-color: rgba(255, 255, 255, 0);
-            margin: auto;
-            position: absolute;
-            top: 5%;
-            left: 0;
-            bottom: 0;
-            right: 0;
+            .layout-inner-sections;
 
             .ContentBox {
                 height: 100%;
                 width: 100%;
 
-                #left-side {
-                    float: left;
-                    width: 35%;
-                    height: 90%;
-                    margin-left: 13%;
-                    margin-right: 2%;
-                    padding-top: 15px;
-                    background-color: rgba(255,255,255,1);
-                    text-align: center;
-                    border-radius: 6px;
-                    box-shadow: 0 2px 0 0 #e5e5e5;
+                .left-side {
+                    .layout-left-side;
+
+                    img {
+                        margin: 30px;
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        font-family: DRIVEBY;
+                        color: #464646;
+                        font-weight: 200;
+                        margin: 10px 0 10px 0;
+                        padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    p {
+                        font-family: Utsaah, Arial;
+                        font-size: 26px;
+                        font-weight: 200;
+                        letter-spacing: 1px;
+                        margin: 30px;
+                        color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
+                    }
+                }
+
+                .right-side {
+                    .layout-right-side;
 
                     img {
                         margin: 30px;
@@ -111,6 +194,60 @@ body {
                         font-weight: 300;
                         margin: 10px 0 10px 0;
                         padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    p {
+                        font-family: Utsaah, Arial;
+                        font-size: 26px;
+                        font-weight: 200;
+                        letter-spacing: 1px;
+                        margin: 30px;
+                        color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #InnerSection2 {
+            .layout-inner-sections;
+            top: 205%;
+
+            .ContentBox {
+                height: 100%;
+                width: 100%;
+
+                .left-side {
+                    .layout-left-side;
+
+                    img {
+                        margin: 30px;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 15px;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        font-family: DRIVEBY;
+                        color: #464646;
+                        font-weight: 300;
+                        margin: 10px 0 10px 0;
+                        padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
                     }
 
                     p {
@@ -120,20 +257,116 @@ body {
                         letter-spacing: 1px;
                         margin: 40px;
                         color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
                     }
                 }
 
-                #right-side {
-                    float: left;
-                    width: 35%;
-                    height: 90%;
-                    margin-right: 13%;
-                    margin-left: 2%;
-                    padding-top: 15px;
-                    background-color: white;
-                    text-align: center;
-                    border-radius: 6px;
-                    box-shadow: 0 2px 0 0 #e5e5e5;
+                .right-side {
+                    .layout-right-side;
+
+                    .button {
+                        display: inline-block;
+                        text-transform: uppercase;
+                        color: white;
+                        background: #2980b9;
+                        border-radius: 4px;
+                        padding: 10px 15px;
+                        margin: 5px 5px;
+                        letter-spacing: 2px;
+                        font-size: 24px;
+                        font-weight: 200;
+                        font-family: DRIVEBY;
+                        text-decoration: none;
+                        cursor: pointer;
+                        width: 40%;
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        font-family: DRIVEBY;
+                        color: #464646;
+                        font-weight: 300;
+                        margin: 10px 0 10px 0;
+                        padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    #FireworkDiv {
+                        #ExplosionImg {
+                            margin: 70px 30px 30px 30px;
+
+                            img {
+                                height: 100px;
+                                margin: 15px;
+                            }
+                        }
+
+                        .FireworkLauncher {
+                            margin: 30px 30px 30px 30px;
+
+                            img {
+                                height: 100px;
+                                margin: 10px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #InnerSection3 {
+            .layout-inner-sections;
+            top: 410%;
+
+            .ContentBox {
+                height: 100%;
+                width: 100%;
+
+                .left-side {
+                    .layout-left-side;
+
+
+                    img {
+                        margin: 30px;
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        font-family: DRIVEBY;
+                        color: #464646;
+                        font-weight: 200;
+                        margin: 10px 0 10px 0;
+                        padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    p {
+                        font-family: Utsaah, Arial;
+                        font-size: 26px;
+                        font-weight: 200;
+                        letter-spacing: 1px;
+                        margin: 30px;
+                        color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
+                    }
+                }
+
+                .right-side {
+                    .layout-right-side;
 
                     img {
                         margin: 30px;
@@ -146,42 +379,194 @@ body {
                         font-weight: 300;
                         margin: 10px 0 10px 0;
                         padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
                     }
 
                     p {
                         font-family: Utsaah, Arial;
-                        font-size: 24px;
+                        font-size: 26px;
                         font-weight: 200;
                         letter-spacing: 1px;
-                        margin: 40px;
+                        margin: 30px;
                         color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
                     }
                 }
             }
         }
 
-        #InnerSection2 {
-            width: 90%;
-            height: 60%;
-            background-color: purple;
-            margin: auto;
-            position: absolute;
-            top: 205%;
-            left: 0;
-            bottom: 0;
-            right: 0;
+        #InnerSection4 {
+            .layout-inner-sections;
+            top: 615%;
+
+            .ContentBox {
+                height: 100%;
+                width: 100%;
+
+                .left-side {
+                    .layout-left-side;
+
+                    img {
+                        margin: 30px;
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        font-family: DRIVEBY;
+                        color: #464646;
+                        font-weight: 200;
+                        margin: 10px 0 10px 0;
+                        padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    p {
+                        font-family: Utsaah, Arial;
+                        font-size: 26px;
+                        font-weight: 200;
+                        letter-spacing: 1px;
+                        margin: 30px;
+                        color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
+                    }
+                }
+
+                .right-side {
+                    .layout-right-side;
+
+                    img {
+                        margin: 30px;
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        font-family: DRIVEBY;
+                        color: #464646;
+                        font-weight: 300;
+                        margin: 10px 0 10px 0;
+                        padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    p {
+                        font-family: Utsaah, Arial;
+                        font-size: 26px;
+                        font-weight: 200;
+                        letter-spacing: 1px;
+                        margin: 30px;
+                        color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
+                    }
+                }
+            }
         }
 
-        #InnerSection3 {
-            width: 90%;
-            height: 60%;
-            background-color: yellow;
-            margin: auto;
-            position: absolute;
-            top: 410%;
-            left: 0;
-            bottom: 0;
-            right: 0;
+        #InnerSection5 {
+            .layout-inner-sections;
+            top: 820%;
+
+            .ContentBox {
+                height: 100%;
+                width: 100%;
+
+                .left-side {
+                    .layout-left-side;
+
+                    img {
+                        margin: 30px;
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        font-family: DRIVEBY;
+                        color: #464646;
+                        font-weight: 200;
+                        margin: 10px 0 10px 0;
+                        padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    p {
+                        font-family: Utsaah, Arial;
+                        font-size: 26px;
+                        font-weight: 200;
+                        letter-spacing: 1px;
+                        margin: 30px;
+                        color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
+                    }
+                }
+
+                .right-side {
+                    .layout-right-side;
+
+                    img {
+                        margin: 30px;
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        font-family: DRIVEBY;
+                        color: #464646;
+                        font-weight: 300;
+                        margin: 10px 0 10px 0;
+                        padding: 0;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 20px 0 20px 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    p {
+                        font-family: Utsaah, Arial;
+                        font-size: 26px;
+                        font-weight: 200;
+                        letter-spacing: 1px;
+                        margin: 30px;
+                        color: #606060;
+
+                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
+                            margin: 40px 30px 30px 30px;
+                        }
+                    }
+                }
+            }
         }
+
+
+
+
+
+
+
     }
 }
