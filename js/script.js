@@ -3,15 +3,18 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
     getViewportData();
 
-    $("#CanonDiv").hide();
+    goToSection1();
 
-    $("#ExplosionImg").css({ "visibility" : "hidden" });
+    $(".ExplosionImg").animate({ "opacity": "0" }, 50);
 
     listenToClicks();
 }
 
-function listenToClicks()
-{
+//variabelen
+
+var pageCounter = 0;
+
+function listenToClicks() {
     var HomeButton = document.getElementById("HomeButton");
     HomeButton.addEventListener("click", goToSection1);
 
@@ -27,50 +30,109 @@ function listenToClicks()
     var Button1600 = document.getElementById("Button4");
     Button1600.addEventListener("click", goToSection5);
 
-    var FireworkButton = document.getElementById("FireworkButton");
-    FireworkButton.addEventListener("click", goToFireworkTab);
+    var Button1700 = document.getElementById("Button5");
+    Button1700.addEventListener("click", goToSection6);
 
-    var CanonButton = document.getElementById("CanonButton");
-    CanonButton.addEventListener("click", goToCanonTab);
+    var Button1800 = document.getElementById("Button6");
+    Button1800.addEventListener("click", goToSection7);
+
+    var Button1900 = document.getElementById("Button7");
+    Button1900.addEventListener("click", goToSection8);
+
+    var Button2000 = document.getElementById("Button8");
+    Button2000.addEventListener("click", goToSection9);
 
     var LaunchButton = document.getElementById("LaunchButton");
     LaunchButton.addEventListener("click", FireWorkLaunch);
+
+    var NextButton = document.getElementsByClassName("NextButton");
+    for (var i = 0; i < NextButton.length; i++) {
+        NextButton[i].addEventListener("click", goToNextSection);
+    }
+
+    var PreviousButton = document.getElementsByClassName("PreviousButton");
+    for (var i = 0; i < PreviousButton.length; i++) {
+        PreviousButton[i].addEventListener("click", goToPreviousSection);
+    }
+}
+
+function goToNextSection() {
+    switch (pageCounter) {
+        case 0: goToSection2();
+            break;
+        case 1: goToSection3();
+            break;
+        case 2: goToSection4();
+            break;
+        case 3: goToSection5();
+            break;
+        case 4: goToSection6();
+            break;
+        case 5: goToSection7();
+            break;
+        case 6: goToSection8();
+            break;
+        case 7: goToSection9();
+            break;
+        default: goToSection1();
+    }
+}
+
+function goToPreviousSection() {
+    switch (pageCounter) {
+        case 1: goToSection1();
+            break;
+        case 2: goToSection2();
+            break;
+        case 3: goToSection3();
+            break;
+        case 4: goToSection4();
+            break;
+        case 5: goToSection5();
+            break;
+        case 6: goToSection6();
+            break;
+        case 7: goToSection7();
+            break;
+        case 8: goToSection8();
+            break;
+        case 9: goToSection9();
+            break;
+        default: goToSection1();
+    }
 }
 
 function getViewportData() {
     var heightScreen, widthScreen;
-
     heightScreen = $(window).height();
     widthScreen = $(window).width();
-
     $("#Section1").css({ 'height': heightScreen });
     $("#Section1").css({ 'width': widthScreen });
-
     $("#Section2").css({ 'height': heightScreen });
     $("#Section2").css({ 'width': widthScreen });
-
     $("#Section3").css({ 'height': heightScreen });
     $("#Section3").css({ 'width': widthScreen });
-
     $("#Section4").css({ 'height': heightScreen });
     $("#Section4").css({ 'width': widthScreen });
-
     $("#Section5").css({ 'height': heightScreen });
     $("#Section5").css({ 'width': widthScreen });
-
+    $("#Section6").css({ 'height': heightScreen });
+    $("#Section6").css({ 'width': widthScreen });
+    $("#Section7").css({ 'height': heightScreen });
+    $("#Section7").css({ 'width': widthScreen });
+    $("#Section8").css({ 'height': heightScreen });
+    $("#Section8").css({ 'width': widthScreen });
+    $("#Section9").css({ 'height': heightScreen });
+    $("#Section9").css({ 'width': widthScreen });
     console.log(heightScreen);
     console.log(widthScreen);
-    console.log("test");
 }
 
 function goToSection1() {
-
     console.log("zit in de click 1");
-
     $('html, body').animate({
         scrollTop: $("#Section1").offset().top
     }, 500);
-
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
@@ -78,16 +140,17 @@ function goToSection1() {
             next();
         });
     }
+    document.getElementById("ButtonHiglight1").innerHTML = "home";
+    $(".PreviousButton").css({ 'visibility': 'hidden' });
+    $(".NextButton").css({ 'visibility': 'visible' });
+    pageCounter = 0;
 }
 
 function goToSection2() {
-
     console.log("zit in de click 2");
-
     $('html, body').animate({
         scrollTop: $("#Section2").offset().top
     }, 500);
-
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
@@ -95,35 +158,22 @@ function goToSection2() {
             next();
         });
     }
+    document.getElementById("ButtonHiglight2").innerHTML = "1300";
+    $(".PreviousButton").css({ 'visibility': 'visible' });
+    $(".NextButton").css({ 'visibility': 'visible' });
+    pageCounter = 1;
 }
 
-function goToFireworkTab()
-{
-    $("#CanonDiv").hide();
-    $("#FireworkDiv").show();
-}
-
-function FireWorkLaunch()
-{
-    $("#ExplosionImg").css({ "visibility": "visible" });
-
+function FireWorkLaunch() {
+    $(".ExplosionImg").animate({ "opacity": "1" }, 200);
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', '../sound/firework.wav');
     audioElement.setAttribute('autoplay', 'autoplay');
-
     audioElement.play();
 }
 
-function goToCanonTab()
-{
-    $("#FireworkDiv").hide();
-    $("#CanonDiv").show();
-}
-
 function goToSection3() {
-
     console.log("zit in de click 3");
-
     $('html, body').animate({
         scrollTop: $("#Section3").offset().top
     }, 500);
@@ -135,33 +185,35 @@ function goToSection3() {
             next();
         });
     }
+    document.getElementById("ButtonHiglight3").innerHTML = "1400";
+    $(".PreviousButton").css({ 'visibility': 'visible' });
+    $(".NextButton").css({ 'visibility': 'visible' });
+    pageCounter = 2;
 }
 
 function goToSection4() {
-
     console.log("zit in de click 4");
-
     $('html, body').animate({
         scrollTop: $("#Section4").offset().top
     }, 500);
-
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
-            $(this).css({ 'background-color': '#27ae60' });
+            $(this).css({ 'background-color': '#16a085' });
             next();
         });
     }
+    document.getElementById("ButtonHiglight4").innerHTML = "1500";
+    $(".PreviousButton").css({ 'visibility': 'visible' });
+    $(".NextButton").css({ 'visibility': 'visible' });
+    pageCounter = 3;
 }
 
 function goToSection5() {
-
     console.log("zit in de click 5");
-
     $('html, body').animate({
         scrollTop: $("#Section5").offset().top
     }, 500);
-
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
@@ -169,4 +221,82 @@ function goToSection5() {
             next();
         });
     }
+    document.getElementById("ButtonHiglight5").innerHTML = "1600";
+    $(".PreviousButton").css({ 'visibility': 'visible' });
+    $(".NextButton").css({ 'visibility': 'visible' });
+    pageCounter = 4;
+}
+
+function goToSection6() {
+    console.log("zit in de click 6");
+    $('html, body').animate({
+        scrollTop: $("#Section6").offset().top
+    }, 500);
+
+    var x = document.getElementsByClassName("button")
+    for (var i = 0; i < x.length; i++) {
+        $(x[i]).delay(200).queue(function (next) {
+            $(this).css({ 'background-color': '#c4932e' });
+            next();
+        });
+    }
+    document.getElementById("ButtonHiglight6").innerHTML = "1700";
+    $(".PreviousButton").css({ 'visibility': 'visible' });
+    $(".NextButton").css({ 'visibility': 'visible' });
+    pageCounter = 5;
+}
+
+function goToSection7() {
+    console.log("zit in de click 7");
+    $('html, body').animate({
+        scrollTop: $("#Section7").offset().top
+    }, 500);
+    var x = document.getElementsByClassName("button")
+    for (var i = 0; i < x.length; i++) {
+        $(x[i]).delay(200).queue(function (next) {
+            $(this).css({ 'background-color': '#16b7b7' });
+            next();
+        });
+    }
+    document.getElementById("ButtonHiglight7").innerHTML = "1800";
+    $(".PreviousButton").css({ 'visibility': 'visible' });
+    $(".NextButton").css({ 'visibility': 'visible' });
+    pageCounter = 6;
+}
+
+function goToSection8() {
+    console.log("zit in de click 8");
+    $('html, body').animate({
+        scrollTop: $("#Section8").offset().top
+    }, 500);
+    var x = document.getElementsByClassName("button")
+    for (var i = 0; i < x.length; i++) {
+        $(x[i]).delay(200).queue(function (next) {
+            $(this).css({ 'background-color': 'green' });
+            next();
+        });
+    }
+    document.getElementById("ButtonHiglight8").innerHTML = "1900";
+    $(".PreviousButton").css({ 'visibility': 'visible' });
+    $(".NextButton").css({ 'visibility': 'visible' });
+    pageCounter = 7;
+}
+
+function goToSection9() {
+    console.log("zit in de click 9");
+    $('html, body').animate({
+        scrollTop: $("#Section9").offset().top
+    }, 500);
+    var x = document.getElementsByClassName("button")
+    for (var i = 0; i < x.length; i++) {
+        $(x[i]).delay(200).queue(function (next) {
+            $(this).css({ 'background-color': 'purple' });
+            next();
+        });
+    }
+    document.getElementById("ButtonHiglight9").innerHTML = "2000";
+    $(".PreviousButton").css({ 'visibility': 'visible' });
+    $(".NextButton").css({ 'visibility': 'hidden' });
+    pageCounter = 8;
+    
 }
