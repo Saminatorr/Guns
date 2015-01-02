@@ -45,6 +45,9 @@ function listenToClicks() {
     var LaunchButton = document.getElementById("LaunchButton");
     LaunchButton.addEventListener("click", FireWorkLaunch);
 
+    var DefuseButton = document.getElementById("DefuseButton");
+    DefuseButton.addEventListener("click", DefuseBomb);
+
     var NextButton = document.getElementsByClassName("NextButton");
     for (var i = 0; i < NextButton.length; i++) {
         NextButton[i].addEventListener("click", goToNextSection);
@@ -164,12 +167,25 @@ function goToSection2() {
     pageCounter = 1;
 }
 
+var musicOn;
 function FireWorkLaunch() {
     $(".ExplosionImg").animate({ "opacity": "1" }, 200);
-    var audioElement = document.createElement('audio');
-    audioElement.setAttribute('src', '../sound/firework.wav');
-    audioElement.setAttribute('autoplay', 'autoplay');
-    audioElement.play();
+
+    myAudio = new Audio('sound/firework.wav');
+    if (musicOn == true) {
+        console.log("hij speelt al");
+        return null;
+    }
+    else {
+        console.log("hij speelt nog niet");
+        myAudio.play();
+        musicOn = true;
+        myAudio.addEventListener('ended', function () {
+            this.currentTime = 0;
+            musicOn = false;
+            $(".ExplosionImg").animate({ "opacity": "0" }, 300);
+        }, false);
+    }
 }
 
 function goToSection3() {
@@ -181,7 +197,7 @@ function goToSection3() {
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
-            $(this).css({ 'background-color': '#ff7200' });
+            $(this).css({ 'background-color': '#e56600' });
             next();
         });
     }
@@ -189,7 +205,29 @@ function goToSection3() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 2;
+
+    startTimer();
 }
+
+var DefuseTimer
+function startTimer() {
+    var DefuseTime = 21;
+    DefuseTimer = setInterval(function () { myTimer() }, 1000);
+
+    function myTimer() {
+        DefuseTime -= 1;
+        document.getElementById("TimerDiv").innerHTML = DefuseTime;
+        if (DefuseTime == 0) {
+            //boom
+            clearInterval(DefuseTimer);
+        }
+    }
+}
+
+function DefuseBomb() {
+    clearInterval(DefuseTimer);
+}
+
 
 function goToSection4() {
     console.log("zit in de click 4");
@@ -199,7 +237,7 @@ function goToSection4() {
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
-            $(this).css({ 'background-color': '#16a085' });
+            $(this).css({ 'background-color': '#674172' });
             next();
         });
     }
@@ -218,6 +256,7 @@ function goToSection5() {
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#2c3e50' });
+            //34495E
             next();
         });
     }
@@ -236,7 +275,9 @@ function goToSection6() {
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
-            $(this).css({ 'background-color': '#c4932e' });
+            $(this).css({ 'background-color': '#9e782a' });
+            //af842d
+            //c4932e origineel
             next();
         });
     }
@@ -254,7 +295,9 @@ function goToSection7() {
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
-            $(this).css({ 'background-color': '#16b7b7' });
+            $(this).css({ 'background-color': '#22313F' });
+
+            //16b7b7
             next();
         });
     }
@@ -272,7 +315,7 @@ function goToSection8() {
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
-            $(this).css({ 'background-color': 'green' });
+            $(this).css({ 'background-color': '#542733' });
             next();
         });
     }
@@ -290,7 +333,7 @@ function goToSection9() {
     var x = document.getElementsByClassName("button")
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
-            $(this).css({ 'background-color': 'purple' });
+            $(this).css({ 'background-color': '#4A3833' });
             next();
         });
     }
@@ -298,5 +341,5 @@ function goToSection9() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'hidden' });
     pageCounter = 8;
-    
+
 }

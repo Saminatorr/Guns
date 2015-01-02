@@ -113,25 +113,25 @@ body {
   background-image: url('../images/chinese.png');
 }
 #ContentWrapper .Sections:nth-child(3) {
-  background-image: url('../images/fuse.png');
+  background-image: url('../images/fuse2.png');
 }
 #ContentWrapper .Sections:nth-child(4) {
-  background-image: url('../images/bullet2.png');
+  background-image: url('../images/bulle2t.png');
 }
 #ContentWrapper .Sections:nth-child(5) {
   background-image: url('../images/flintlock4.png');
 }
 #ContentWrapper .Sections:nth-child(6) {
-  background-image: url('../images/duelling3.png');
+  background-image: url('../images/duelling2.png');
 }
 #ContentWrapper .Sections:nth-child(7) {
-  background-image: url('../images/gatling2.png');
+  background-image: url('../images/gatlinggun.png');
 }
 #ContentWrapper .Sections:nth-child(8) {
-  background-image: url('../images/chinese.png');
+  background-image: url('../images/ww1.png');
 }
 #ContentWrapper .Sections:nth-child(9) {
-  background-image: url('../images/fuse.png');
+  background-image: url('../images/2000-bg.png');
 }
 #ContentWrapper .Sections #InnerSection1 {
   width: 90%;
@@ -475,9 +475,6 @@ body {
     margin-right: 8%;
   }
 }
-#ContentWrapper .Sections #InnerSection3 .ContentBox .right-side img {
-  margin: 30px;
-}
 #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side h3 {
   font-size: 45px;
   font-family: DRIVEBY;
@@ -504,6 +501,20 @@ body {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side p {
     margin: 40px 30px 30px 30px;
   }
+}
+#ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section {
+  margin: 30px;
+  height: 70%;
+}
+#ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section img {
+  height: 360px;
+  float: left;
+}
+#ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section #TimerDiv {
+  font-size: 45px;
+  font-family: DRIVEBY;
+  color: #464646;
+  font-weight: 200;
 }
 #ContentWrapper .Sections #InnerSection4 {
   width: 90%;
