@@ -113,16 +113,16 @@ body {
   background-image: url('../images/chinese.png');
 }
 #ContentWrapper .Sections:nth-child(3) {
-  background-image: url('../images/fuse2.png');
+  background-image: url('../images/fuse.png');
 }
 #ContentWrapper .Sections:nth-child(4) {
-  background-image: url('../images/bulle2t.png');
+  background-image: url('../images/bullet.png');
 }
 #ContentWrapper .Sections:nth-child(5) {
-  background-image: url('../images/flintlock4.png');
+  background-image: url('../images/flintlock.png');
 }
 #ContentWrapper .Sections:nth-child(6) {
-  background-image: url('../images/duelling2.png');
+  background-image: url('../images/duelling-bg.png');
 }
 #ContentWrapper .Sections:nth-child(7) {
   background-image: url('../images/gatlinggun.png');

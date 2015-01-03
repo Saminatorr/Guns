@@ -3,12 +3,51 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
     getViewportData();
 
+    loadJSONFile();
+
     goToSection1();
 
     listenToClicks();
+
+    getLocation();
 }
 
-//variabelen
+function loadJSONFile() {
+    console.log("zit in de load");
+    $.ajax({
+        type: "GET",
+        url: "../json/json.json",
+        dataType: "json",
+        success: function (data) {
+            image = data.content.home.leftside.image;
+            title = data.content.home.leftside.title;
+            text = data.content.home.leftside.text;
+
+            fillContent();
+        }
+    });
+}
+
+function getLocation() {
+    var info = function (pos) {
+        var lat = pos.coords.latitude,
+            long = pos.coords.longitude,
+            coords = lat + ', ' + long;
+
+        document.getElementById("GoogleMap").setAttribute('src', 'https://maps.google.be/?q=' + coords + '&z=14&output=embed')
+    }
+
+    navigator.geolocation.getCurrentPosition(info);
+
+
+
+}
+
+function fillContent() {
+    document.getElementById("HomeImage").src = image;
+    document.getElementById("HomeTitle").innerHTML = title;
+    document.getElementById("HomeText").innerHTML = text;
+}
 
 var pageCounter = 0;
 
@@ -58,8 +97,8 @@ function listenToClicks() {
     }
 
     var PreviousButton = document.getElementsByClassName("PreviousButton");
-    for (var i = 0; i < PreviousButton.length; i++) {
-        PreviousButton[i].addEventListener("click", goToPreviousSection);
+    for (var t = 0; t < PreviousButton.length; t++) {
+        PreviousButton[t].addEventListener("click", goToPreviousSection);
     }
 }
 
@@ -140,7 +179,7 @@ function goToSection1() {
     $('html, body').animate({
         scrollTop: $("#Section1").offset().top
     }, 500);
-    var x = document.getElementsByClassName("button")
+    var x = document.getElementsByClassName("button");
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#2980b9' });
@@ -152,6 +191,7 @@ function goToSection1() {
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 0;
     clearInterval(DefuseTimer);
+    clearInterval(TargetTimer);
 }
 
 function goToSection2() {
@@ -172,24 +212,25 @@ function goToSection2() {
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 1;
     clearInterval(DefuseTimer);
+    clearInterval(TargetTimer);
 }
 
-var musicOn;
+var musicOnFirework;
 function fireWorkLaunch() {
     $(".ExplosionImg").animate({ "opacity": "1" }, 200);
 
-    myAudio = new Audio('sound/firework.wav');
-    if (musicOn == true) {
+    var myAudio = new Audio('sound/firework.wav');
+    if (musicOnFirework == true) {
         console.log("hij speelt al");
         return null;
     }
     else {
         console.log("hij speelt nog niet");
         myAudio.play();
-        musicOn = true;
+        musicOnFirework = true;
         myAudio.addEventListener('ended', function () {
             this.currentTime = 0;
-            musicOn = false;
+            musicOnFirework = false;
             $(".ExplosionImg").animate({ "opacity": "0" }, 300);
         }, false);
     }
@@ -201,7 +242,7 @@ function goToSection3() {
         scrollTop: $("#Section3").offset().top
     }, 500);
 
-    var x = document.getElementsByClassName("button")
+    var x = document.getElementsByClassName("button");
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#e56600' });
@@ -214,6 +255,7 @@ function goToSection3() {
     pageCounter = 2;
 
     startTimerBomb();
+    clearInterval(TargetTimer);
 }
 
 var DefuseTimer
@@ -225,15 +267,20 @@ function startTimerBomb() {
         DefuseTime -= 1;
         document.getElementById("TimerDiv").innerHTML = DefuseTime;
         if (DefuseTime == 0) {
-            //boom
             clearInterval(DefuseTimer);
             var para = document.createElement("p");
             var node = document.createTextNode("Boom! The bomb exploded and you are dead now.");
             para.appendChild(node);
-
             document.getElementById("TimerDiv").appendChild(para);
+            bombSound();
         }
     }
+}
+
+function bombSound() {
+    var myAudio = new Audio('sound/bombblast.wav');
+    myAudio.play();
+
 }
 
 function defuseBomb() {
@@ -251,7 +298,7 @@ function goToSection4() {
     $('html, body').animate({
         scrollTop: $("#Section4").offset().top
     }, 500);
-    var x = document.getElementsByClassName("button")
+    var x = document.getElementsByClassName("button");
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#674172' });
@@ -263,6 +310,7 @@ function goToSection4() {
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 3;
     clearInterval(DefuseTimer);
+    clearInterval(TargetTimer);
 }
 
 function goToSection5() {
@@ -283,6 +331,7 @@ function goToSection5() {
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 4;
     clearInterval(DefuseTimer);
+    clearInterval(TargetTimer);
 }
 
 function goToSection6() {
@@ -291,7 +340,7 @@ function goToSection6() {
         scrollTop: $("#Section6").offset().top
     }, 500);
 
-    var x = document.getElementsByClassName("button")
+    var x = document.getElementsByClassName("button");
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#9e782a' });
@@ -315,7 +364,7 @@ function startTimerDuel() {
     function myTimer() {
         TargetTime -= 1;
         document.getElementById("TimerDivDuel").innerHTML = TargetTime;
-        if (TargetTime == 0) {
+        if (TargetTime === 0) {
             //boom
             clearInterval(TargetTimer);
             var para = document.createElement("p");
@@ -341,12 +390,10 @@ function goToSection7() {
     $('html, body').animate({
         scrollTop: $("#Section7").offset().top
     }, 500);
-    var x = document.getElementsByClassName("button")
+    var x = document.getElementsByClassName("button");
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#22313F' });
-
-            //16b7b7
             next();
         });
     }
@@ -355,10 +402,11 @@ function goToSection7() {
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 6;
     clearInterval(DefuseTimer);
+    clearInterval(TargetTimer);
 }
 
 function shootFaster() {
-    myAudio = new Audio('sound/gunshot.wav');
+    var myAudio = new Audio('sound/gunshot.wav');
     myAudio.play();
 
 }
@@ -368,7 +416,7 @@ function goToSection8() {
     $('html, body').animate({
         scrollTop: $("#Section8").offset().top
     }, 500);
-    var x = document.getElementsByClassName("button")
+    var x = document.getElementsByClassName("button");
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#542733' });
@@ -380,6 +428,7 @@ function goToSection8() {
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 7;
     clearInterval(DefuseTimer);
+    clearInterval(TargetTimer);
 }
 
 function goToSection9() {
@@ -387,7 +436,7 @@ function goToSection9() {
     $('html, body').animate({
         scrollTop: $("#Section9").offset().top
     }, 500);
-    var x = document.getElementsByClassName("button")
+    var x = document.getElementsByClassName("button");
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#4A3833' });
@@ -399,5 +448,5 @@ function goToSection9() {
     $(".NextButton").css({ 'visibility': 'hidden' });
     pageCounter = 8;
     clearInterval(DefuseTimer);
-
+    clearInterval(TargetTimer);
 }
