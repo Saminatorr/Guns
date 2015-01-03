@@ -307,7 +307,6 @@ body {
                         font-family: DRIVEBY;
                         text-decoration: none;
                         cursor: pointer;
-                        width: 40%;
                     }
 
                     h3 {
@@ -427,19 +426,30 @@ body {
                     }
 
                     .bomb-section {
-                        margin: 30px;
+                        margin: 30px 30px 30px 20px;
                         height: 70%;
+                        text-align: center;
 
                         img {
                             height: 360px;
                             float: left;
                         }
 
-                        #TimerDiv {
-                            font-size: 45px;
-                            font-family: DRIVEBY;
-                            color: #464646;
-                            font-weight: 200;
+                        .right-side-defuse {
+                            float: right;
+                            width: 170px;
+                            margin-right: 10px;
+
+                            #TimerDiv {
+                                font-size: 150px;
+                                font-family: DRIVEBY;
+                                color: #464646;
+                                font-weight: 200;
+
+                                p {
+                                    margin: 10px;
+                                }
+                            }
                         }
                     }
                 }
@@ -498,7 +508,8 @@ body {
                     .layout-right-side;
 
                     img {
-                        margin: 30px;
+                        margin: 10px;
+                        height: 150px;
                     }
 
                     h3 {
@@ -520,8 +531,8 @@ body {
                         font-size: 24px;
                         font-weight: 200;
                         letter-spacing: 1px;
-                        margin: 30px;
                         color: #606060;
+                        margin: 10px 5px 5px 5px;
 
                         @media screen and (max-width: 1281px), screen and (max-height: 900px) {
                             margin: 40px 30px 30px 30px;
@@ -583,11 +594,12 @@ body {
                     .layout-right-side;
 
                     img {
-                        margin: 30px;
+                        margin: 5px;
+                        height: 80px;
                     }
 
                     h3 {
-                        font-size: 45px;
+                        font-size: 35px;
                         font-family: DRIVEBY;
                         color: #464646;
                         font-weight: 300;
@@ -605,7 +617,7 @@ body {
                         font-size: 24px;
                         font-weight: 200;
                         letter-spacing: 1px;
-                        margin: 30px;
+                        margin: 10px 30px 10px 30px;
                         color: #606060;
 
                         @media screen and (max-width: 1281px), screen and (max-height: 900px) {
@@ -668,10 +680,6 @@ body {
                 .right-side {
                     .layout-right-side;
 
-                    img {
-                        margin: 30px;
-                    }
-
                     h3 {
                         font-size: 45px;
                         font-family: DRIVEBY;
@@ -696,6 +704,34 @@ body {
 
                         @media screen and (max-width: 1281px), screen and (max-height: 900px) {
                             margin: 40px 30px 30px 30px;
+                        }
+                    }
+
+                    .target-section {
+                        margin: 30px 30px 30px 20px;
+                        height: 70%;
+                        text-align: center;
+
+                        img {
+                            height: 360px;
+                            float: left;
+                        }
+
+                        .right-side-target {
+                            float: right;
+                            width: 170px;
+                            margin-right: 10px;
+
+                            #TimerDivDuel {
+                                font-size: 150px;
+                                font-family: DRIVEBY;
+                                color: #464646;
+                                font-weight: 200;
+
+                                p {
+                                    margin: 10px;
+                                }
+                            }
                         }
                     }
                 }
@@ -756,7 +792,8 @@ body {
                     .layout-right-side;
 
                     img {
-                        margin: 30px;
+                        width: 330px;
+                        margin: 0 100px;
                     }
 
                     h3 {
@@ -784,6 +821,13 @@ body {
                         @media screen and (max-width: 1281px), screen and (max-height: 900px) {
                             margin: 40px 30px 30px 30px;
                         }
+                    }
+
+                    .button {
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        -webkit-user-select: none;
+                        user-select: none;
                     }
                 }
             }

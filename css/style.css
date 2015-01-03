@@ -357,7 +357,6 @@ body {
   font-family: DRIVEBY;
   text-decoration: none;
   cursor: pointer;
-  width: 40%;
 }
 #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side h3 {
   font-size: 40px;
@@ -503,18 +502,27 @@ body {
   }
 }
 #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section {
-  margin: 30px;
+  margin: 30px 30px 30px 20px;
   height: 70%;
+  text-align: center;
 }
 #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section img {
   height: 360px;
   float: left;
 }
-#ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section #TimerDiv {
-  font-size: 45px;
+#ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section .right-side-defuse {
+  float: right;
+  width: 170px;
+  margin-right: 10px;
+}
+#ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section .right-side-defuse #TimerDiv {
+  font-size: 150px;
   font-family: DRIVEBY;
   color: #464646;
   font-weight: 200;
+}
+#ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section .right-side-defuse #TimerDiv p {
+  margin: 10px;
 }
 #ContentWrapper .Sections #InnerSection4 {
   width: 90%;
@@ -605,7 +613,8 @@ body {
   }
 }
 #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side img {
-  margin: 30px;
+  margin: 10px;
+  height: 150px;
 }
 #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side h3 {
   font-size: 45px;
@@ -626,8 +635,8 @@ body {
   font-size: 24px;
   font-weight: 200;
   letter-spacing: 1px;
-  margin: 30px;
   color: #606060;
+  margin: 10px 5px 5px 5px;
 }
 @media screen and (max-width: 1281px), screen and (max-height: 900px) {
   #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side p {
@@ -723,10 +732,11 @@ body {
   }
 }
 #ContentWrapper .Sections #InnerSection5 .ContentBox .right-side img {
-  margin: 30px;
+  margin: 5px;
+  height: 80px;
 }
 #ContentWrapper .Sections #InnerSection5 .ContentBox .right-side h3 {
-  font-size: 45px;
+  font-size: 35px;
   font-family: DRIVEBY;
   color: #464646;
   font-weight: 300;
@@ -744,7 +754,7 @@ body {
   font-size: 24px;
   font-weight: 200;
   letter-spacing: 1px;
-  margin: 30px;
+  margin: 10px 30px 10px 30px;
   color: #606060;
 }
 @media screen and (max-width: 1281px), screen and (max-height: 900px) {
@@ -840,9 +850,6 @@ body {
     margin-right: 8%;
   }
 }
-#ContentWrapper .Sections #InnerSection6 .ContentBox .right-side img {
-  margin: 30px;
-}
 #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side h3 {
   font-size: 45px;
   font-family: DRIVEBY;
@@ -869,6 +876,29 @@ body {
   #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side p {
     margin: 40px 30px 30px 30px;
   }
+}
+#ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section {
+  margin: 30px 30px 30px 20px;
+  height: 70%;
+  text-align: center;
+}
+#ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section img {
+  height: 360px;
+  float: left;
+}
+#ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section .right-side-target {
+  float: right;
+  width: 170px;
+  margin-right: 10px;
+}
+#ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section .right-side-target #TimerDivDuel {
+  font-size: 150px;
+  font-family: DRIVEBY;
+  color: #464646;
+  font-weight: 200;
+}
+#ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section .right-side-target #TimerDivDuel p {
+  margin: 10px;
 }
 #ContentWrapper .Sections #InnerSection7 {
   width: 90%;
@@ -959,7 +989,8 @@ body {
   }
 }
 #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side img {
-  margin: 30px;
+  width: 330px;
+  margin: 0 100px;
 }
 #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side h3 {
   font-size: 45px;
@@ -987,6 +1018,12 @@ body {
   #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side p {
     margin: 40px 30px 30px 30px;
   }
+}
+#ContentWrapper .Sections #InnerSection7 .ContentBox .right-side .button {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #ContentWrapper .Sections #InnerSection8 {
   width: 90%;

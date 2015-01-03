@@ -5,8 +5,6 @@ function init() {
 
     goToSection1();
 
-    $(".ExplosionImg").animate({ "opacity": "0" }, 50);
-
     listenToClicks();
 }
 
@@ -43,10 +41,16 @@ function listenToClicks() {
     Button2000.addEventListener("click", goToSection9);
 
     var LaunchButton = document.getElementById("LaunchButton");
-    LaunchButton.addEventListener("click", FireWorkLaunch);
+    LaunchButton.addEventListener("click", fireWorkLaunch);
 
     var DefuseButton = document.getElementById("DefuseButton");
-    DefuseButton.addEventListener("click", DefuseBomb);
+    DefuseButton.addEventListener("click", defuseBomb);
+
+    var ShootButton = document.getElementById("ShootButton");
+    ShootButton.addEventListener("click", shootTarget);
+
+    var GatlingButton = document.getElementById("GatlingButton");
+    GatlingButton.addEventListener("click", shootFaster);
 
     var NextButton = document.getElementsByClassName("NextButton");
     for (var i = 0; i < NextButton.length; i++) {
@@ -147,9 +151,11 @@ function goToSection1() {
     $(".PreviousButton").css({ 'visibility': 'hidden' });
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 0;
+    clearInterval(DefuseTimer);
 }
 
 function goToSection2() {
+    $(".ExplosionImg").animate({ "opacity": "0" }, 50);
     console.log("zit in de click 2");
     $('html, body').animate({
         scrollTop: $("#Section2").offset().top
@@ -165,10 +171,11 @@ function goToSection2() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 1;
+    clearInterval(DefuseTimer);
 }
 
 var musicOn;
-function FireWorkLaunch() {
+function fireWorkLaunch() {
     $(".ExplosionImg").animate({ "opacity": "1" }, 200);
 
     myAudio = new Audio('sound/firework.wav');
@@ -206,11 +213,11 @@ function goToSection3() {
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 2;
 
-    startTimer();
+    startTimerBomb();
 }
 
 var DefuseTimer
-function startTimer() {
+function startTimerBomb() {
     var DefuseTime = 21;
     DefuseTimer = setInterval(function () { myTimer() }, 1000);
 
@@ -220,12 +227,22 @@ function startTimer() {
         if (DefuseTime == 0) {
             //boom
             clearInterval(DefuseTimer);
+            var para = document.createElement("p");
+            var node = document.createTextNode("Boom! The bomb exploded and you are dead now.");
+            para.appendChild(node);
+
+            document.getElementById("TimerDiv").appendChild(para);
         }
     }
 }
 
-function DefuseBomb() {
+function defuseBomb() {
     clearInterval(DefuseTimer);
+    var para = document.createElement("p");
+    var node = document.createTextNode("You stopped the bomb! Lucky you.");
+    para.appendChild(node);
+
+    document.getElementById("TimerDiv").appendChild(para);
 }
 
 
@@ -245,6 +262,7 @@ function goToSection4() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 3;
+    clearInterval(DefuseTimer);
 }
 
 function goToSection5() {
@@ -264,6 +282,7 @@ function goToSection5() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 4;
+    clearInterval(DefuseTimer);
 }
 
 function goToSection6() {
@@ -276,8 +295,6 @@ function goToSection6() {
     for (var i = 0; i < x.length; i++) {
         $(x[i]).delay(200).queue(function (next) {
             $(this).css({ 'background-color': '#9e782a' });
-            //af842d
-            //c4932e origineel
             next();
         });
     }
@@ -285,6 +302,38 @@ function goToSection6() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 5;
+    clearInterval(DefuseTimer);
+
+    startTimerDuel();
+}
+
+var TargetTimer
+function startTimerDuel() {
+    var TargetTime = 11;
+    TargetTimer = setInterval(function () { myTimer() }, 1000);
+
+    function myTimer() {
+        TargetTime -= 1;
+        document.getElementById("TimerDivDuel").innerHTML = TargetTime;
+        if (TargetTime == 0) {
+            //boom
+            clearInterval(TargetTimer);
+            var para = document.createElement("p");
+            var node = document.createTextNode("Oh no, he shot you! You are dead now.");
+            para.appendChild(node);
+
+            document.getElementById("TimerDivDuel").appendChild(para);
+        }
+    }
+}
+
+function shootTarget() {
+    clearInterval(TargetTimer);
+    var para = document.createElement("p");
+    var node = document.createTextNode("That was close, you are still alive!");
+    para.appendChild(node);
+
+    document.getElementById("TimerDivDuel").appendChild(para);
 }
 
 function goToSection7() {
@@ -305,6 +354,13 @@ function goToSection7() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 6;
+    clearInterval(DefuseTimer);
+}
+
+function shootFaster() {
+    myAudio = new Audio('sound/gunshot.wav');
+    myAudio.play();
+
 }
 
 function goToSection8() {
@@ -323,6 +379,7 @@ function goToSection8() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'visible' });
     pageCounter = 7;
+    clearInterval(DefuseTimer);
 }
 
 function goToSection9() {
@@ -341,5 +398,6 @@ function goToSection9() {
     $(".PreviousButton").css({ 'visibility': 'visible' });
     $(".NextButton").css({ 'visibility': 'hidden' });
     pageCounter = 8;
+    clearInterval(DefuseTimer);
 
 }
