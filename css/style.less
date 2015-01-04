@@ -37,7 +37,7 @@ body {
         z-index: 71;
         cursor: pointer;
 
-        @media screen and (max-width: 1279px), screen and (max-height: 800px) {
+        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
             font-size: 45px;
             margin: 5px 5px 0 5px;
         }
@@ -59,7 +59,7 @@ body {
     text-decoration: none;
     cursor: pointer;
 
-    @media screen and (max-width: 1279px), screen and (max-height: 800px) {
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
         font-size: 20px;
         padding: 5px 10px;
     }
@@ -75,6 +75,10 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
+    text-align: center;
+
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    }
 }
 
 .layout-left-side {
@@ -85,13 +89,12 @@ body {
     margin-right: 2%;
     padding-top: 15px;
     background-color: rgba(255,255,255,1);
-    text-align: center;
     border-radius: 6px;
     box-shadow: 0 2px 0 0 #e5e5e5;
 
-    @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-        height: 112%;
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
         width: 40%;
+        height: 103%;
         margin-left: 8%;
     }
 }
@@ -104,14 +107,69 @@ body {
     margin-left: 2%;
     padding-top: 15px;
     background-color: white;
-    text-align: center;
     border-radius: 6px;
     box-shadow: 0 2px 0 0 #e5e5e5;
 
-    @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-        height: 112%;
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
         width: 40%;
+        height: 103%;
         margin-right: 8%;
+    }
+}
+
+.image-layout {
+    margin: 30px;
+
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+        margin: 10px;
+        height: 80px;
+    }
+}
+
+.title-layout {
+    font-size: 45px;
+    font-family: DRIVEBY;
+    color: #464646;
+    font-weight: 200;
+    margin: 10px 0 10px 0;
+    padding: 0;
+
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+        margin: 5px 0 5px 0;
+        font-size: 25px;
+    }
+}
+
+.text-layout {
+    font-family: Utsaah, Arial;
+    font-size: 24px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin: 30px;
+    color: #606060;
+
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+        margin: 10px 15px;
+        font-size: 20px;
+    }
+}
+
+.timer-layout {
+    font-size: 150px;
+    font-family: DRIVEBY;
+    color: #464646;
+    font-weight: 200;
+
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+        font-size: 100px;
+    }
+}
+
+.button-highlight-layout {
+    margin-top: 50px;
+
+    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+        margin-top: 25px;
     }
 }
 
@@ -120,46 +178,81 @@ body {
     .Sections {
         &:nth-child(1) {
             background-image: url('../images/Guns3.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: center;
+            }
         }
 
         &:nth-child(2) {
             background-image: url('../images/chinese.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: 20% center;
+            }
         }
 
         &:nth-child(3) {
             background-image: url('../images/fuse.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: center 0;
+            }
         }
 
         &:nth-child(4) {
             background-image: url('../images/bullet.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: center;
+            }
         }
 
         &:nth-child(5) {
             background-image: url('../images/flintlock.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: center;
+            }
         }
 
         &:nth-child(6) {
             background-image: url('../images/duelling-bg.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: center 15%;
+            }
         }
 
         &:nth-child(7) {
             background-image: url('../images/gatlinggun.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: center;
+            }
         }
 
         &:nth-child(8) {
             background-image: url('../images/ww1.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: center 0;
+            }
         }
 
         &:nth-child(9) {
             background-image: url('../images/2000-bg.png');
+
+            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                background-position: center 0;
+            }
         }
 
         #InnerSection1 {
             .layout-inner-sections;
-            text-align: center;
 
             #ButtonHiglight1 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -170,34 +263,15 @@ body {
                     .layout-left-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 200;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
@@ -205,34 +279,15 @@ body {
                     .layout-right-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
             }
@@ -241,10 +296,9 @@ body {
         #InnerSection2 {
             .layout-inner-sections;
             top: 205%;
-            text-align: center;
 
             #ButtonHiglight2 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -255,38 +309,15 @@ body {
                     .layout-left-side;
 
                     img {
-                        margin: 30px;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 15px;
-                        }
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 40px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
@@ -294,51 +325,47 @@ body {
                     .layout-right-side;
 
                     .button {
-                        display: inline-block;
-                        text-transform: uppercase;
-                        color: white;
-                        background: #2980b9;
-                        border-radius: 4px;
-                        padding: 10px 15px;
-                        margin: 5px 5px;
-                        letter-spacing: 2px;
-                        font-size: 24px;
-                        font-weight: 200;
-                        font-family: DRIVEBY;
-                        text-decoration: none;
-                        cursor: pointer;
+                        .button;
                     }
 
-                    h3 {
+                    h2 {
+                        .title-layout;
                         font-size: 40px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 30px 0 30px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
                     }
 
                     #FireworkDiv {
                         .ExplosionImg {
                             margin: 50px 30px 30px 30px;
 
+                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                margin: 20px;
+                            }
+
                             img {
                                 height: 120px;
                                 margin: 15px 20px 15px 20px;
+
+                                @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                    height: 100px;
+                                    margin: 10px;
+                                }
                             }
                         }
 
                         .FireworkLauncher {
                             margin: 30px 30px 30px 30px;
 
+                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                margin: 10px;
+                            }
+
                             img {
                                 height: 140px;
                                 margin: 10px 20px;
+
+                                @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                    height: 100px;
+                                }
                             }
                         }
                     }
@@ -349,10 +376,9 @@ body {
         #InnerSection3 {
             .layout-inner-sections;
             top: 405%;
-            text-align: center;
 
             #ButtonHiglight3 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -364,65 +390,27 @@ body {
 
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 200;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
                 .right-side {
                     .layout-right-side;
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
 
                     .bomb-section {
@@ -433,6 +421,10 @@ body {
                         img {
                             height: 360px;
                             float: left;
+
+                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                height: 240px;
+                            }
                         }
 
                         .right-side-defuse {
@@ -441,10 +433,7 @@ body {
                             margin-right: 10px;
 
                             #TimerDiv {
-                                font-size: 150px;
-                                font-family: DRIVEBY;
-                                color: #464646;
-                                font-weight: 200;
+                                .timer-layout;
 
                                 p {
                                     margin: 10px;
@@ -459,10 +448,9 @@ body {
         #InnerSection4 {
             .layout-inner-sections;
             top: 605%;
-            text-align: center;
 
             #ButtonHiglight4 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -473,34 +461,15 @@ body {
                     .layout-left-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 200;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
@@ -510,33 +479,20 @@ body {
                     img {
                         margin: 10px;
                         height: 150px;
+
+                        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            height: 115px;
+                            margin: 0;
+                        }
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        color: #606060;
+                        .text-layout;
                         margin: 10px 5px 5px 5px;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
                     }
                 }
             }
@@ -545,10 +501,9 @@ body {
         #InnerSection5 {
             .layout-inner-sections;
             top: 805%;
-            text-align: center;
 
             #ButtonHiglight5 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -559,34 +514,15 @@ body {
                     .layout-left-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 200;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
@@ -596,33 +532,21 @@ body {
                     img {
                         margin: 5px;
                         height: 80px;
+
+                        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            margin: 0;
+                            height: 55px;
+                        }
                     }
 
-                    h3 {
+                    h2 {
+                        .title-layout;
                         font-size: 35px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
+                        .text-layout;
                         margin: 10px 30px 10px 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
                     }
                 }
             }
@@ -632,10 +556,9 @@ body {
         #InnerSection6 {
             .layout-inner-sections;
             top: 1005%;
-            text-align: center;
 
             #ButtonHiglight6 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -646,65 +569,27 @@ body {
                     .layout-left-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 200;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
                 .right-side {
                     .layout-right-side;
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
 
                     .target-section {
@@ -715,6 +600,10 @@ body {
                         img {
                             height: 360px;
                             float: left;
+
+                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                height: 240px;
+                            }
                         }
 
                         .right-side-target {
@@ -723,10 +612,7 @@ body {
                             margin-right: 10px;
 
                             #TimerDivDuel {
-                                font-size: 150px;
-                                font-family: DRIVEBY;
-                                color: #464646;
-                                font-weight: 200;
+                                .timer-layout;
 
                                 p {
                                     margin: 10px;
@@ -743,10 +629,9 @@ body {
         #InnerSection7 {
             .layout-inner-sections;
             top: 1205%;
-            text-align: center;
 
             #ButtonHiglight7 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -757,34 +642,15 @@ body {
                     .layout-left-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 200;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
@@ -794,33 +660,18 @@ body {
                     img {
                         width: 330px;
                         margin: 0 100px;
+
+                        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            width: 250px;
+                        }
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
 
                     .button {
@@ -836,10 +687,10 @@ body {
         #InnerSection8 {
             .layout-inner-sections;
             top: 1405%;
-            text-align: center;
+
 
             #ButtonHiglight8 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -850,34 +701,15 @@ body {
                     .layout-left-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 200;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
@@ -885,34 +717,15 @@ body {
                     .layout-right-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
             }
@@ -921,10 +734,10 @@ body {
         #InnerSection9 {
             .layout-inner-sections;
             top: 1605%;
-            text-align: center;
+
 
             #ButtonHiglight9 {
-                margin-top: 50px;
+                .button-highlight-layout;
             }
 
             .ContentBox {
@@ -935,68 +748,44 @@ body {
                     .layout-left-side;
 
                     img {
-                        margin: 30px;
+                        .image-layout;
                     }
 
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 200;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
-                        }
+                        .text-layout;
                     }
                 }
 
                 .right-side {
                     .layout-right-side;
 
-                    img {
-                        margin: 30px;
-                    }
-
-                    h3 {
-                        font-size: 45px;
-                        font-family: DRIVEBY;
-                        color: #464646;
-                        font-weight: 300;
-                        margin: 10px 0 10px 0;
-                        padding: 0;
-
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 20px 0 20px 0;
-                            font-size: 32px;
-                        }
+                    h2 {
+                        .title-layout;
                     }
 
                     p {
-                        font-family: Utsaah, Arial;
-                        font-size: 24px;
-                        font-weight: 200;
-                        letter-spacing: 1px;
-                        margin: 30px;
-                        color: #606060;
+                        .text-layout;
+                    }
 
-                        @media screen and (max-width: 1281px), screen and (max-height: 900px) {
-                            margin: 40px 30px 30px 30px;
+                    #Location {
+                        margin: 30px;
+
+                        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            margin: 15px;
+                        }
+
+                        iframe {
+                            width: 100%;
+                            height: 240px;
+                            border-width: 0;
+
+                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                height: 190px;
+                            }
                         }
                     }
                 }

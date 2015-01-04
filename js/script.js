@@ -34,7 +34,7 @@ function getLocation() {
             long = pos.coords.longitude,
             coords = lat + ', ' + long;
 
-        document.getElementById("GoogleMap").setAttribute('src', 'https://maps.google.be/?q=' + coords + '&z=14&output=embed')
+        document.getElementById("GoogleMap").setAttribute('src', 'https://maps.google.be/?q=' + coords + '&z=17&output=embed')
     }
 
     navigator.geolocation.getCurrentPosition(info);
@@ -90,6 +90,9 @@ function listenToClicks() {
 
     var GatlingButton = document.getElementById("GatlingButton");
     GatlingButton.addEventListener("click", shootFaster);
+
+    var DropBomb = document.getElementById("DropBomb");
+    DropBomb.addEventListener("click", dropBomb);
 
     var NextButton = document.getElementsByClassName("NextButton");
     for (var i = 0; i < NextButton.length; i++) {
@@ -449,4 +452,14 @@ function goToSection9() {
     pageCounter = 8;
     clearInterval(DefuseTimer);
     clearInterval(TargetTimer);
+
+    document.getElementById("BombSent").innerHTML = null;
+}
+
+function dropBomb()
+{
+    var para = document.createElement("p");
+    var node = document.createTextNode("The bomb is on its way, you better get out of there!");
+    para.appendChild(node);
+    document.getElementById("BombSent").appendChild(para);
 }

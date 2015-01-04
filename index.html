@@ -3,14 +3,13 @@
 <head>
     <title>Scroll Page Test</title>
     <link href="css/style.min.css" rel="stylesheet" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="js/jquery-2.1.3.min.js"></script>
 </head>
 <body>
 
     <div id="FixedMenu">
-
         <h1 id="HomeButton">History of Guns</h1>
-
         <span class="button" id="Button1">1300</span>
         <span class="button" id="Button2">1400</span>
         <span class="button" id="Button3">1500</span>
@@ -26,23 +25,19 @@
             <div id="InnerSection1">
                 <section class="ContentBox">
                     <section class="left-side">
-
-                        <img id="HomeImage" src="" />
-                        <h3 id="HomeTitle"><!--Guns--></h3>
+                        <img id="HomeImage" src="#" alt="Icon of a firing revolver."/>
+                        <h2 id="HomeTitle"><!--Guns--></h2>
                         <p id="HomeText">
                             <!--Guns. They are fascinating right? Over 75 people per 100 have a gun in America.
                             That means more then 270 million civilians have a fire arm. Each year they have approximately 31.000 gun incidents where
                             many people have been attacked by some kind of pistol.
                             In the world of today, having a gun is nothing special. It is even normal.
                             But where do guns come from? What are their roots?-->
-
                         </p>
-
                     </section>
                     <section class="right-side">
-
-                        <img src="images/time.png" />
-                        <h3>History</h3>
+                        <img src="images/time.png" alt="Icon of a clock."/>
+                        <h2>History</h2>
                         <p>
                             That's why I want to go back in time.
                             Let's find out how they invented guns and how they became so powerful.
@@ -51,14 +46,11 @@
                             happened in that century.
                             So go ahead and click a date above or click on the arrows on the bottom. Enjoy your journey!
                         </p>
-
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight1"></span>
-                <span class="button NextButton">></span>
-
+                <span class="button NextButton">&gt;</span>
             </div>
         </div>
 
@@ -66,9 +58,8 @@
             <div id="InnerSection2">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/firework.png" />
-
-                        <h3>Firework</h3>
+                        <img src="images/firework.png" alt="Icon of a firework."/>
+                        <h2>Firework</h2>
                         <p>
                             It all started with the Chinese. They were the first to invent gunpowder which is used to fire a gun.
                             However, they didn't start with a gun we see today. They started out with a simple barrel of
@@ -77,44 +68,37 @@
                             together with projectiles that fit perfectly. And without knowing, they made a gun. All it takes is
                             gunpowder, a barrel and a projectile.
                         </p>
-
                     </section>
                     <section class="right-side">
                         <div id="FireworkDiv">
-                            <h3>Launch the firework!</h3>
-
+                            <h2>Launch the firework!</h2>
                             <section class="ExplosionImg">
-                                <img src="images/fireworkexplosion.png" />
-                                <img src="images/fireworkexplosion.png" />
-                                <img src="images/fireworkexplosion.png" />
+                                <img src="images/fireworkexplosion.png" alt="Icon of a firework explosion." />
+                                <img src="images/fireworkexplosion.png" alt="Icon of a firework explosion." />
+                                <img src="images/fireworkexplosion.png" alt="Icon of a firework explosion." />
                             </section>
-
                             <section class="FireworkLauncher">
-                                <img src="images/FireworkLauncher.png" />
-                                <img src="images/FireworkLauncher.png" />
-                                <img src="images/FireworkLauncher.png" />
+                                <img src="images/FireworkLauncher.png" alt="Icon of a firework launcher." />
+                                <img src="images/FireworkLauncher.png" alt="Icon of a firework launcher." />
+                                <img src="images/FireworkLauncher.png" alt="Icon of a firework launcher." />
                                 <span class="button" id="LaunchButton">Launch</span>
                             </section>
 
                         </div>
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight2"></span>
-                <span class="button NextButton">></span>
-
+                <span class="button NextButton">&gt;</span>
             </div>
         </div>
-
 
         <div class="Sections" id="Section3">
             <div id="InnerSection3">
                 <section class="ContentBox">
                     <section class="left-side">
-
-                        <img src="images/bomb.png" />
-                        <h3>Fuse</h3>
+                        <img src="images/bomb.png" alt="Icon of a bomb with a fuse."/>
+                        <h2>Fuse</h2>
                         <p>
                             In the beginning, guns were fired with a fuse. The spark was transferred untill
                             it reached the gunpowder and then boom. Or they held a torch near the gunpowder and it exploded just like that.
@@ -122,30 +106,25 @@
                             So that's where the matchlock mechanism came in. The design removed the need of one hand in order to fire the gun.
                             It basically just put a fuse on your gun.
                         </p>
-
                     </section>
                     <section class="right-side">
-                        <h3>Defuse the bomb!</h3>
+                        <h2>Defuse the bomb!</h2>
                         <p>
                             This bomb is going to blow in twenty seconds. Quickly push the defuse button in order to stop it from devastating my website!
                         </p>
                         <section class="bomb-section">
-                            <img src="images/barrel.png" />
+                            <img src="images/barrel.png" alt="Icon of a barrel of dynamite."/>
 
                             <section class="right-side-defuse">
                                 <span class="button" id="DefuseButton">Defuse</span>
-                                <div id="TimerDiv">
-
-                                </div>
+                                <div id="TimerDiv"></div>
                             </section>
                         </section>
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight3"></span>
-                <span class="button NextButton">></span>
-
+                <span class="button NextButton">&gt;</span>
             </div>
         </div>
 
@@ -153,9 +132,8 @@
             <div id="InnerSection4">
                 <section class="ContentBox">
                     <section class="left-side">
-
-                        <img src="images/bullet2.png" />
-                        <h3>Bullets</h3>
+                        <img src="images/bullet2.png" alt="Icon of a bullet."/>
+                        <h2>Bullets</h2>
                         <p>
                             During the 1500s they realised round bullets were a little bit unhandy to load in to their gun.
                             They had to put gunpowder in the barrel, then put the bullet in, and then push it all together.
@@ -164,24 +142,20 @@
                             packaging a bullet together with the gunpowder. They also invented rifling, which are grooves in the barrel
                             to make the projectile spin and make it more accurate.
                         </p>
-
                     </section>
                     <section class="right-side">
-
-                        <h3>Rifling</h3>
+                        <h2>Rifling</h2>
                         <p>The bullet spins because of the grooves in the barrel.</p>
-                        <img src="images/rifling2.png" />
-                        <h3>No Rifling</h3>
+                        <img src="images/rifling2.png" alt="Icon of rifling."/>
+                        <h2>No Rifling</h2>
                         <p>The bullet falls down because it is not spinning.</p>
-                        <img src="images/norifling.png" />
+                        <img src="images/norifling.png" alt="Icon of no rifling"/>
 
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight4"></span>
-                <span class="button NextButton">></span>
-
+                <span class="button NextButton">&gt;</span>
             </div>
         </div>
 
@@ -189,9 +163,8 @@
             <div id="InnerSection5">
                 <section class="ContentBox">
                     <section class="left-side">
-
-                        <img src="images/sight.png" />
-                        <h3>Sights</h3>
+                        <img src="images/sight.png" alt="Icon of an iron sight."/>
+                        <h2>Sights</h2>
                         <p>
                             Thanks to the rifling technique guns are way more accurate then before. But another technique that also improved
                             accuracy was the use of sights. A 'uitsteeksel' on the far end of the barrel aligned by eye with a notch at the
@@ -200,31 +173,23 @@
                             It was a new system simular to the matchlock but way better.
 
                         </p>
-
                     </section>
                     <section class="right-side">
-
                         <p>
                             In the 1600s they only had simple iron sights. But today there are a lot of different sights
                             and each one has its own purpose. Let's take a look at a few.
                         </p>
-
-                        <h3>iron sights</h3>
-                        <img src="images/Ironsight.png" />
-
-                        <h3>red dot sights</h3>
-                        <img src="images/Reddotsight.png" />
-
-                        <h3>telescopic sights</h3>
-                        <img src="images/Telescopicsight.png" />
-
+                        <h2>iron sights</h2>
+                        <img src="images/Ironsight.png" alt="Icon of a second iron sight."/>
+                        <h2>red dot sights</h2>
+                        <img src="images/Reddotsight.png" alt="Icon of a red dot sight."/>
+                        <h2>telescopic sights</h2>
+                        <img src="images/Telescopicsight.png" alt="Icon of a telescopic sight."/>
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight5"></span>
-                <span class="button NextButton">></span>
-
+                <span class="button NextButton">&gt;</span>
             </div>
         </div>
 
@@ -233,9 +198,8 @@
             <div id="InnerSection6">
                 <section class="ContentBox">
                     <section class="left-side">
-
-                        <img src="images/duelling.png" />
-                        <h3>Duelling</h3>
+                        <img src="images/duelling.png" alt="Icon of two duelling pistols."/>
+                        <h2>Duelling</h2>
                         <p>
                             In the 1600s the French invented the bayonet but only in the 1700s it was used by other countries.
                             It was a simple long blade and they put it on to the guns end.
@@ -243,37 +207,26 @@
                             the carrying of a sword or a knife. This happened around 1750.
                             A few years later they became officially standarized weapons. It was a rule that they should be
                             nine or ten inch long with the flintlock system carrying a ball of 48 pound.
-
                         </p>
-
                     </section>
                     <section class="right-side">
-
-                        <h3>Duel of death</h3>
-
+                        <h2>Duel of death</h2>
                         <p>
                             This is the moment of truth!
                             Shoot the target before it kills you! Hurry up!
                         </p>
-
                         <section class="target-section">
-
-                            <img src="images/TargetDuel.png" />
-
+                            <img src="images/TargetDuel.png" alt="Icon of a person with a gun ready to fire at you."/>
                             <section class="right-side-target">
                                 <span class="button" id="ShootButton">Shoot</span>
-                                <div id="TimerDivDuel">
-
-                                </div>
+                                <div id="TimerDivDuel"></div>
                             </section>
                         </section>
-
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight6"></span>
-                <span class="button NextButton">></span>
+                <span class="button NextButton">&gt;</span>
 
             </div>
         </div>
@@ -283,9 +236,8 @@
             <div id="InnerSection7">
                 <section class="ContentBox">
                     <section class="left-side">
-
-                        <img src="images/gatling-icon.png" />
-                        <h3>Guns</h3>
+                        <img src="images/gatling-icon.png" alt="Icon of a gatling gun."/>
+                        <h2>Guns</h2>
                         <p>
                             The breechloading concept developed in the late 1800s led to a very important advantage. Speed of loading.
                             Next to that, they also thought of multiple chambers for multiple shots. They also invented the slide
@@ -294,38 +246,21 @@
                             came up with the gatling gun.
                             A gun with several barrels that turned and fired when a man turned its crank while his partner
                             fed the gun with ammunition.
-
-
-
-                            <!--During the 1800s they invented the gatling gun.
-                            This is a gun with several barrels. A man had to turn its crank and his assistant had to feed the ammunition.
-                            At the late 1880s, the first successful full-auto machine fun, which fires continuously while the
-                            trigger was held back, was perfected and adopted by several armies.
-                            The winchester was also a popular gun in the 1800s. It was one of the first repeating guns. That means that
-                            the gun holds more then one bullet and can be fired more than once between chargings.-->
                         </p>
-
                     </section>
                     <section class="right-side">
-
-                        <h3>Shoot faster</h3>
-
+                        <h2>Shoot faster</h2>
                         <p>
                             Each time you click turn, it will fire a round.
                             If you want to shoot faster, you will have to click faster!
                         </p>
-
                         <span class="button" id="GatlingButton">Turn</span>
-
-                        <img src="images/GatlingGunGame.png" />
-
+                        <img src="images/GatlingGunGame.png" alt="Icon of a second gatling gun."/>
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight7"></span>
-                <span class="button NextButton">></span>
-
+                <span class="button NextButton">&gt;</span>
             </div>
         </div>
 
@@ -334,9 +269,8 @@
             <div id="InnerSection8">
                 <section class="ContentBox">
                     <section class="left-side">
-
-                        <img src="images/grenade.png" />
-                        <h3>Advanced weaponry</h3>
+                        <img src="images/grenade.png" alt="Icon of a grenade."/>
+                        <h2>Advanced weaponry</h2>
                         <p>
                             A lot happened during the 1900s. Several wars and battles were fought throughout the century.
                             Therefor they had the need for better and more advanced weapons.
@@ -345,14 +279,11 @@
                             They also came to the idea of sub machine guns and assault rifles.
                             Sub machine for in close combat, assault rifles for longer range but also for close combat if nessecary.
                             Next to that, grenades, flamethrowers and mortars became introduced as well.
-
                         </p>
-
                     </section>
                     <section class="right-side">
-
-                        <img src="images/tank.png" />
-                        <h3>Combat vehicles</h3>
+                        <img src="images/tank.png" alt="Icon of a tank."/>
+                        <h2>Combat vehicles</h2>
                         <p>
                             During World War One, armourd vehicles were first deployed. There was one problem though,
                             they required smooth terein to move upon and thus
@@ -363,53 +294,41 @@
                             In the beginning they were mostly used
                             reconnaissance but after a while pilots also learned how to shoot and drop bombs.
                         </p>
-
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight8"></span>
-                <span class="button NextButton">></span>
-
+                <span class="button NextButton">&gt;</span>
             </div>
         </div>
-
 
         <div class="Sections" id="Section9">
             <div id="InnerSection9">
                 <section class="ContentBox">
                     <section class="left-side">
-
-                        <img src="images/Robot.png" />
-                        <h3>Robots</h3>
+                        <img src="images/Robot.png" alt="Icon of a robot."/>
+                        <h2>Robots</h2>
                         <p>
                             Starting in 1900, weaponry got very advanced very quickly. Tanks, fighter jets, grenades, snipers, flashbangs, ...
                             But also on larger scale like missiles and nuclear bombs. 1900 was a century full of surprises and even today new
                             technologies are made. Super high-tech sights, corner guns that can shoot around a corner, ...
                             Technology keeps growing and we don't know what will come next. We don't know what
                             the future will bring. Drones already exist, it's only a matter of time that soldiers will be robots too.
-
-
                         </p>
-
                     </section>
                     <section class="right-side">
-
-                        <h3>Bombs away</h3>
-
+                        <h2>Bombs away</h2>
                         <p>Do you want to drop a bomb at this location? Go ahead!</p>
-
                         <div id="Location">
-                            <iframe id="GoogleMap" src="https://maps.google.be?output=embed" frameborder="0"></iframe>
+                            <iframe id="GoogleMap" src="https://maps.google.be?output=embed"></iframe>
                         </div>
-
+                        <span class="button" id="DropBomb">Drop</span>
+                        <div id="BombSent"></div>
                     </section>
                 </section>
-
-                <span class="button PreviousButton"><</span>
+                <span class="button PreviousButton">&lt;</span>
                 <span class="button" id="ButtonHiglight9"></span>
-                <span class="button NextButton">></span>
-
+                <span class="button NextButton">&gt;</span>
             </div>
         </div>
 
