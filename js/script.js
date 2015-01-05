@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
+
     getViewportData();
 
     loadJSONFile();
@@ -10,22 +11,36 @@ function init() {
     listenToClicks();
 
     getLocation();
+
+    //loadAudio();
+
 }
 
+var fireworkAudio;
+function loadAudio()
+{
+    fireworkAudio = new Audio('sound/firework.wav');
+}
+
+
 function loadJSONFile() {
-    console.log("zit in de load");
     $.ajax({
         type: "GET",
-        url: "../json/json.json",
+        url: "data.json",
         dataType: "json",
         success: function (data) {
             image = data.content.home.leftside.image;
             title = data.content.home.leftside.title;
             text = data.content.home.leftside.text;
-
             fillContent();
         }
     });
+}
+
+function fillContent() {
+    document.getElementById("HomeImage").src = image;
+    document.getElementById("HomeTitle").innerHTML = title;
+    document.getElementById("HomeText").innerHTML = text;
 }
 
 function getLocation() {
@@ -38,15 +53,6 @@ function getLocation() {
     }
 
     navigator.geolocation.getCurrentPosition(info);
-
-
-
-}
-
-function fillContent() {
-    document.getElementById("HomeImage").src = image;
-    document.getElementById("HomeTitle").innerHTML = title;
-    document.getElementById("HomeText").innerHTML = text;
 }
 
 var pageCounter = 0;
@@ -155,6 +161,7 @@ function getViewportData() {
     var heightScreen, widthScreen;
     heightScreen = $(window).height();
     widthScreen = $(window).width();
+
     $("#Section1").css({ 'height': heightScreen });
     $("#Section1").css({ 'width': widthScreen });
     $("#Section2").css({ 'height': heightScreen });
@@ -259,6 +266,8 @@ function goToSection3() {
 
     startTimerBomb();
     clearInterval(TargetTimer);
+
+    isDefused = true;
 }
 
 var DefuseTimer
@@ -276,6 +285,7 @@ function startTimerBomb() {
             para.appendChild(node);
             document.getElementById("TimerDiv").appendChild(para);
             bombSound();
+            isDefused = false;
         }
     }
 }
@@ -286,13 +296,18 @@ function bombSound() {
 
 }
 
+var isDefused = true;
 function defuseBomb() {
-    clearInterval(DefuseTimer);
-    var para = document.createElement("p");
-    var node = document.createTextNode("You stopped the bomb! Lucky you.");
-    para.appendChild(node);
 
-    document.getElementById("TimerDiv").appendChild(para);
+    if (isDefused == true) {
+        console.log("zit in de true");
+        clearInterval(DefuseTimer);
+        var para = document.createElement("p");
+        var node = document.createTextNode("You stopped the bomb! Lucky you.");
+        para.appendChild(node);
+        document.getElementById("TimerDiv").appendChild(para);
+        isDefused = false;
+    }
 }
 
 
@@ -357,6 +372,7 @@ function goToSection6() {
     clearInterval(DefuseTimer);
 
     startTimerDuel();
+    isShot = true;
 }
 
 var TargetTimer
@@ -375,17 +391,26 @@ function startTimerDuel() {
             para.appendChild(node);
 
             document.getElementById("TimerDivDuel").appendChild(para);
+
+            var myAudio = new Audio('sound/duelshot.wav');
+            myAudio.play();
+            isShot = false;
         }
     }
 }
 
-function shootTarget() {
-    clearInterval(TargetTimer);
-    var para = document.createElement("p");
-    var node = document.createTextNode("That was close, you are still alive!");
-    para.appendChild(node);
 
-    document.getElementById("TimerDivDuel").appendChild(para);
+var isShot = true;
+function shootTarget() {
+    if (isShot == true) {
+        clearInterval(TargetTimer);
+        var para = document.createElement("p");
+        var node = document.createTextNode("That was close, you are still alive!");
+        para.appendChild(node);
+        document.getElementById("TimerDivDuel").appendChild(para);
+        isShot = false;
+    }
+
 }
 
 function goToSection7() {
@@ -406,9 +431,25 @@ function goToSection7() {
     pageCounter = 6;
     clearInterval(DefuseTimer);
     clearInterval(TargetTimer);
+
+    $("#AfterTurn").hide();
+
 }
 
+var isTurned = true;
 function shootFaster() {
+
+    if (isTurned == true) {
+        $("#BeforeTurn").hide();
+        $("#AfterTurn").show();
+        isTurned = false;
+    }
+    else {
+        $("#BeforeTurn").show();
+        $("#AfterTurn").hide();
+        isTurned = true;
+    }
+
     var myAudio = new Audio('sound/gunshot.wav');
     myAudio.play();
 
@@ -432,6 +473,8 @@ function goToSection8() {
     pageCounter = 7;
     clearInterval(DefuseTimer);
     clearInterval(TargetTimer);
+
+    $("#AfterTurn").hide();
 }
 
 function goToSection9() {
@@ -454,12 +497,21 @@ function goToSection9() {
     clearInterval(TargetTimer);
 
     document.getElementById("BombSent").innerHTML = null;
+    isDropped = true;
 }
 
-function dropBomb()
-{
-    var para = document.createElement("p");
-    var node = document.createTextNode("The bomb is on its way, you better get out of there!");
-    para.appendChild(node);
-    document.getElementById("BombSent").appendChild(para);
+var isDropped = true;
+function dropBomb() {
+    if (isDropped == true) {
+        var para = document.createElement("p");
+        var node = document.createTextNode("The bomb is on its way, you better get out of there!");
+        para.appendChild(node);
+        document.getElementById("BombSent").appendChild(para);
+        isDropped = false;
+
+        /*console.log("voor de drop");
+        var myAudio = new Audio('sound/gunshot.wav');
+        myAudio.play();
+        console.log("na de drop");*/
+    }
 }

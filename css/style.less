@@ -1,16 +1,12 @@
 ﻿@font-face {
     font-family: 'Bullet';
-    src: url('../fonts/BulletInYourHead.ttf') format('truetype');
+    src: url('../fonts/bulletinyourhead.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'DRIVEBY';
-    src: url('../fonts/DRIVEBY.TTF') format('truetype');
+    font-family: 'driveby';
+    src: url('../fonts/driveby.woff') format('woff');
 }
-
-@bluecolor: #2980b9;
-@redcolor: #e74c3c;
-@orangecolor: #ff7200;
 
 body {
     margin: 0;
@@ -37,9 +33,19 @@ body {
         z-index: 71;
         cursor: pointer;
 
-        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+        @media screen and (max-width: 1500px) {
             font-size: 45px;
             margin: 5px 5px 0 5px;
+        }
+
+        @media screen and (max-width: 1280px) {
+            font-size: 40px;
+            margin: 10px 10px 0 10px;
+        }
+
+        @media screen and (device-width: 360px) {
+            font-size: 25px;
+            margin: 5px;
         }
     }
 }
@@ -50,18 +56,29 @@ body {
     color: white;
     background: #2980b9;
     border-radius: 4px;
-    padding: 10px 15px;
-    margin: 5px 5px;
+    padding: 10px 15px 7px 15px;
+    margin: 5px;
     letter-spacing: 2px;
     font-size: 24px;
     font-weight: 200;
-    font-family: DRIVEBY;
+    font-family: driveby;
     text-decoration: none;
     cursor: pointer;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    @media screen and (max-width: 1500px) {
+        font-size: 22px;
+        
+    }
+
+    @media screen and (max-width: 1280px) {
         font-size: 20px;
         padding: 5px 10px;
+    }
+
+    @media screen and (device-width: 360px) {
+        font-size: 12px;
+        padding: 5px;
+        margin: 2px;
     }
 }
 
@@ -77,7 +94,8 @@ body {
     right: 0;
     text-align: center;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    @media screen and (max-width: 1280px) {
+        top: 0;
     }
 }
 
@@ -92,7 +110,7 @@ body {
     border-radius: 6px;
     box-shadow: 0 2px 0 0 #e5e5e5;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    @media screen and (max-width: 1500px) {
         width: 40%;
         height: 103%;
         margin-left: 8%;
@@ -110,7 +128,7 @@ body {
     border-radius: 6px;
     box-shadow: 0 2px 0 0 #e5e5e5;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    @media screen and (max-width: 1500px) {
         width: 40%;
         height: 103%;
         margin-right: 8%;
@@ -120,23 +138,43 @@ body {
 .image-layout {
     margin: 30px;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    @media screen and (max-width: 1500px) {
         margin: 10px;
         height: 80px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        margin: 10px;
+        height: 70px;
+    }
+
+    @media screen and (device-width: 360px) {
+        margin: 0;
+        height: 30px;
     }
 }
 
 .title-layout {
     font-size: 45px;
-    font-family: DRIVEBY;
+    font-family: driveby;
     color: #464646;
     font-weight: 200;
     margin: 10px 0 10px 0;
     padding: 0;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
-        margin: 5px 0 5px 0;
+    @media screen and (max-width: 1500px) {
+        margin: 5px 0;
         font-size: 25px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        margin: 5px 0;
+        font-size: 25px;
+    }
+
+    @media screen and (device-width: 360px) {
+        margin: 10px;
+        font-size: 18px;
     }
 }
 
@@ -148,19 +186,33 @@ body {
     margin: 30px;
     color: #606060;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    @media screen and (max-width: 1500px) {
         margin: 10px 15px;
         font-size: 20px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        margin: 10px 15px;
+        font-size: 16px;
+    }
+
+    @media screen and (device-width: 360px) {
+        margin: 10px;
+        font-size: 8px;
     }
 }
 
 .timer-layout {
     font-size: 150px;
-    font-family: DRIVEBY;
+    font-family: driveby;
     color: #464646;
     font-weight: 200;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    @media screen and (max-width: 1500px) {
+        font-size: 100px;
+    }
+
+    @media screen and (max-width: 1280px) {
         font-size: 100px;
     }
 }
@@ -168,40 +220,44 @@ body {
 .button-highlight-layout {
     margin-top: 50px;
 
-    @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+    @media screen and (max-width: 1500px) {
         margin-top: 25px;
     }
+}
+
+.section-height-width {
 }
 
 #ContentWrapper {
     //background-image: url('../img/guns.jpg');
     .Sections {
         &:nth-child(1) {
-            background-image: url('../images/Guns3.png');
+            .section-height-width;
+            background-image: url('../images/bg-home.jpg');
 
-            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+            @media screen and (max-width: 1500px) {
                 background-position: center;
             }
         }
 
         &:nth-child(2) {
-            background-image: url('../images/chinese.png');
+            background-image: url('../images/bg-1300.jpg');
 
-            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+            @media screen and (max-width: 1500px) {
                 background-position: 20% center;
             }
         }
 
         &:nth-child(3) {
-            background-image: url('../images/fuse.png');
+            background-image: url('../images/bg-1400.jpg');
 
-            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+            @media screen and (max-width: 1500px) {
                 background-position: center 0;
             }
         }
 
         &:nth-child(4) {
-            background-image: url('../images/bullet.png');
+            background-image: url('../images/bg-1500.jpg');
 
             @media screen and (max-width: 1500px), screen and (max-height: 700px) {
                 background-position: center;
@@ -209,7 +265,7 @@ body {
         }
 
         &:nth-child(5) {
-            background-image: url('../images/flintlock.png');
+            background-image: url('../images/bg-1600.jpg');
 
             @media screen and (max-width: 1500px), screen and (max-height: 700px) {
                 background-position: center;
@@ -217,15 +273,15 @@ body {
         }
 
         &:nth-child(6) {
-            background-image: url('../images/duelling-bg.png');
+            background-image: url('../images/bg-1700.jpg');
 
-            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+            @media screen and (max-width: 1500px) {
                 background-position: center 15%;
             }
         }
 
         &:nth-child(7) {
-            background-image: url('../images/gatlinggun.png');
+            background-image: url('../images/bg-1800.jpg');
 
             @media screen and (max-width: 1500px), screen and (max-height: 700px) {
                 background-position: center;
@@ -233,17 +289,17 @@ body {
         }
 
         &:nth-child(8) {
-            background-image: url('../images/ww1.png');
+            background-image: url('../images/bg-1900.jpg');
 
-            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+            @media screen and (max-width: 1500px) {
                 background-position: center 0;
             }
         }
 
         &:nth-child(9) {
-            background-image: url('../images/2000-bg.png');
+            background-image: url('../images/bg-2000.jpg');
 
-            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+            @media screen and (max-width: 1500px) {
                 background-position: center 0;
             }
         }
@@ -297,6 +353,10 @@ body {
             .layout-inner-sections;
             top: 205%;
 
+            @media screen and (max-width: 1280px) {
+                top: 200%;
+            }
+
             #ButtonHiglight2 {
                 .button-highlight-layout;
             }
@@ -337,17 +397,26 @@ body {
                         .ExplosionImg {
                             margin: 50px 30px 30px 30px;
 
-                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            @media screen and (max-width: 1500px) {
                                 margin: 20px;
+                            }
+
+                            @media screen and (max-width: 1280px) {
+                                margin: 10px;
                             }
 
                             img {
                                 height: 120px;
                                 margin: 15px 20px 15px 20px;
 
-                                @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                @media screen and (max-width: 1500px) {
                                     height: 100px;
                                     margin: 10px;
+                                }
+
+                                @media screen and (max-width: 1280px) {
+                                    height: 100px;
+                                    margin: 5px;
                                 }
                             }
                         }
@@ -355,15 +424,23 @@ body {
                         .FireworkLauncher {
                             margin: 30px 30px 30px 30px;
 
-                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            @media screen and (max-width: 1500px) {
                                 margin: 10px;
+                            }
+
+                            @media screen and (max-width: 1280px) {
+                                margin: 5px;
                             }
 
                             img {
                                 height: 140px;
                                 margin: 10px 20px;
 
-                                @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                                @media screen and (max-width: 1500px) {
+                                    height: 100px;
+                                }
+
+                                @media screen and (max-width: 1280px) {
                                     height: 100px;
                                 }
                             }
@@ -376,6 +453,10 @@ body {
         #InnerSection3 {
             .layout-inner-sections;
             top: 405%;
+
+            @media screen and (max-width: 1280px) {
+                top: 400%;
+            }
 
             #ButtonHiglight3 {
                 .button-highlight-layout;
@@ -422,15 +503,24 @@ body {
                             height: 360px;
                             float: left;
 
-                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            @media screen and (max-width: 1500px) {
                                 height: 240px;
+                            }
+
+                            @media screen and (max-width: 1280px) {
+                                height: 200px;
                             }
                         }
 
                         .right-side-defuse {
                             float: right;
                             width: 170px;
-                            margin-right: 10px;
+                            margin-right: 13px;
+                            margin-top: 15px;
+
+                            @media screen and (max-width: 1280px) {
+                                width: 200px;
+                            }
 
                             #TimerDiv {
                                 .timer-layout;
@@ -448,6 +538,10 @@ body {
         #InnerSection4 {
             .layout-inner-sections;
             top: 605%;
+
+            @media screen and (max-width: 1280px) {
+                top: 600%;
+            }
 
             #ButtonHiglight4 {
                 .button-highlight-layout;
@@ -480,8 +574,13 @@ body {
                         margin: 10px;
                         height: 150px;
 
-                        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                        @media screen and (max-width: 1500px) {
                             height: 115px;
+                            margin: 0;
+                        }
+
+                        @media screen and (max-width: 1280px) {
+                            height: 105px;
                             margin: 0;
                         }
                     }
@@ -501,6 +600,10 @@ body {
         #InnerSection5 {
             .layout-inner-sections;
             top: 805%;
+
+            @media screen and (max-width: 1280px) {
+                top: 800%;
+            }
 
             #ButtonHiglight5 {
                 .button-highlight-layout;
@@ -533,7 +636,7 @@ body {
                         margin: 5px;
                         height: 80px;
 
-                        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                        @media screen and (max-width: 1500px) {
                             margin: 0;
                             height: 55px;
                         }
@@ -556,6 +659,10 @@ body {
         #InnerSection6 {
             .layout-inner-sections;
             top: 1005%;
+
+            @media screen and (max-width: 1280px) {
+                top: 1000%;
+            }
 
             #ButtonHiglight6 {
                 .button-highlight-layout;
@@ -601,15 +708,20 @@ body {
                             height: 360px;
                             float: left;
 
-                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            @media screen and (max-width: 1500px) {
                                 height: 240px;
+                            }
+
+                            @media screen and (max-width: 1280px) {
+                                height: 200px;
                             }
                         }
 
                         .right-side-target {
                             float: right;
                             width: 170px;
-                            margin-right: 10px;
+                            margin-right: 20px;
+                            margin-top: 15px;
 
                             #TimerDivDuel {
                                 .timer-layout;
@@ -629,6 +741,10 @@ body {
         #InnerSection7 {
             .layout-inner-sections;
             top: 1205%;
+
+            @media screen and (max-width: 1280px) {
+                top: 1200%;
+            }
 
             #ButtonHiglight7 {
                 .button-highlight-layout;
@@ -661,7 +777,7 @@ body {
                         width: 330px;
                         margin: 0 100px;
 
-                        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                        @media screen and (max-width: 1500px) {
                             width: 250px;
                         }
                     }
@@ -688,6 +804,9 @@ body {
             .layout-inner-sections;
             top: 1405%;
 
+            @media screen and (max-width: 1280px) {
+                top: 1400%;
+            }
 
             #ButtonHiglight8 {
                 .button-highlight-layout;
@@ -735,6 +854,9 @@ body {
             .layout-inner-sections;
             top: 1605%;
 
+            @media screen and (max-width: 1280px) {
+                top: 1600%;
+            }
 
             #ButtonHiglight9 {
                 .button-highlight-layout;
@@ -774,7 +896,7 @@ body {
                     #Location {
                         margin: 30px;
 
-                        @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                        @media screen and (max-width: 1500px) {
                             margin: 15px;
                         }
 
@@ -783,8 +905,12 @@ body {
                             height: 240px;
                             border-width: 0;
 
-                            @media screen and (max-width: 1500px), screen and (max-height: 700px) {
+                            @media screen and (max-width: 1500px) {
                                 height: 190px;
+                            }
+
+                            @media screen and (max-width: 1280px) {
+                                height: 170px;
                             }
                         }
                     }
