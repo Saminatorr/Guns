@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>History of Guns</title>
     <link href="css/style.min.css" rel="stylesheet" />
@@ -9,16 +9,16 @@
 </head>
 <body>
 
-    <div id="FixedMenu">
+    <div id="FixedMenu" ng-controller="CenturyController">
         <h1 id="HomeButton">History of Guns</h1>
-        <span class="button" id="Button1">1300</span>
-        <span class="button" id="Button2">1400</span>
-        <span class="button" id="Button3">1500</span>
-        <span class="button" id="Button4">1600</span>
-        <span class="button" id="Button5">1700</span>
-        <span class="button" id="Button6">1800</span>
-        <span class="button" id="Button7">1900</span>
-        <span class="button" id="Button8">2000</span>
+        <span class="button" id="Button1">{{ centuries[0] }}</span>
+        <span class="button" id="Button2">{{ centuries[1] }}</span>
+        <span class="button" id="Button3">{{ centuries[2] }}</span>
+        <span class="button" id="Button4">{{ centuries[3] }}</span>
+        <span class="button" id="Button5">{{ centuries[4] }}</span>
+        <span class="button" id="Button6">{{ centuries[5] }}</span>
+        <span class="button" id="Button7">{{ centuries[6] }}</span>
+        <span class="button" id="Button8">{{ centuries[7] }}</span>
     </div>
 
     <div id="ContentWrapper">
@@ -26,18 +26,18 @@
             <div id="InnerSection1">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img id="HomeImage" src="#" alt="Icon of a firing revolver."/>
-                        <h2 id="HomeTitle"><!--Guns--></h2>
+                        <img id="HomeImage" src="images/firing_gun.png" alt="Icon of a firing revolver." />
+                        <h2 id="HomeTitle">Guns</h2>
                         <p id="HomeText">
-                            <!--Guns. They are fascinating right? Over 75 people per 100 have a gun in America.
+                            Guns. They are fascinating right? Over 75 people per 100 have a gun in America.
                             That means more then 270 million civilians have a fire arm. Each year they have approximately 31.000 gun incidents where
                             many people have been attacked by some kind of pistol.
                             In the world of today, having a gun is nothing special. It is even normal.
-                            But where do guns come from? What are their roots?-->
+                            But where do guns come from? What are their roots?
                         </p>
                     </section>
                     <section class="right-side">
-                        <img src="images/time.png" alt="Icon of a clock."/>
+                        <img src="images/time.png" alt="Icon of a clock." />
                         <h2>History</h2>
                         <p>
                             That's why I want to go back in time.
@@ -59,7 +59,7 @@
             <div id="InnerSection2">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/firework.png" alt="Icon of a firework."/>
+                        <img src="images/firework.png" alt="Icon of a firework." />
                         <h2>Firework</h2>
                         <p>
                             It all started with the Chinese. They were the first to invent gunpowder which is used to fire a gun.
@@ -98,7 +98,7 @@
             <div id="InnerSection3">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/bomb.png" alt="Icon of a bomb with a fuse."/>
+                        <img src="images/bomb.png" alt="Icon of a bomb with a fuse." />
                         <h2>Fuse</h2>
                         <p>
                             In the beginning, guns were fired with a fuse. The spark was transferred untill
@@ -114,7 +114,7 @@
                             This bomb is going to blow in twenty seconds. Quickly push the defuse button in order to stop it from devastating my website!
                         </p>
                         <section class="bomb-section">
-                            <img src="images/barrel.png" alt="Icon of a barrel of dynamite."/>
+                            <img src="images/barrel.png" alt="Icon of a barrel of dynamite." />
 
                             <section class="right-side-defuse">
                                 <span class="button" id="DefuseButton">Defuse</span>
@@ -133,7 +133,7 @@
             <div id="InnerSection4">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/bullet2.png" alt="Icon of a bullet."/>
+                        <img src="images/bullet2.png" alt="Icon of a bullet." />
                         <h2>Bullets</h2>
                         <p>
                             During the 1500s they realised round bullets were a little bit unhandy to load in to their gun.
@@ -147,10 +147,10 @@
                     <section class="right-side">
                         <h2>Rifling</h2>
                         <p>The bullet spins because of the grooves in the barrel.</p>
-                        <img src="images/rifling2.png" alt="Icon of rifling."/>
+                        <img src="images/rifling2.png" alt="Icon of rifling." />
                         <h2>No Rifling</h2>
                         <p>The bullet falls down because it is not spinning.</p>
-                        <img src="images/norifling.png" alt="Icon of no rifling"/>
+                        <img src="images/norifling.png" alt="Icon of no rifling" />
 
                     </section>
                 </section>
@@ -164,7 +164,7 @@
             <div id="InnerSection5">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/sight.png" alt="Icon of an iron sight."/>
+                        <img src="images/sight.png" alt="Icon of an iron sight." />
                         <h2>Sights</h2>
                         <p>
                             Thanks to the rifling technique guns are way more accurate then before. But another technique that also improved
@@ -181,11 +181,11 @@
                             and each one has its own purpose. Let's take a look at a few.
                         </p>
                         <h2>iron sights</h2>
-                        <img src="images/Ironsight.png" alt="Icon of a second iron sight."/>
+                        <img src="images/Ironsight.png" alt="Icon of a second iron sight." />
                         <h2>red dot sights</h2>
-                        <img src="images/Reddotsight.png" alt="Icon of a red dot sight."/>
+                        <img src="images/Reddotsight.png" alt="Icon of a red dot sight." />
                         <h2>telescopic sights</h2>
-                        <img src="images/Telescopicsight.png" alt="Icon of a telescopic sight."/>
+                        <img src="images/Telescopicsight.png" alt="Icon of a telescopic sight." />
                     </section>
                 </section>
                 <span class="button PreviousButton">&lt;</span>
@@ -199,7 +199,7 @@
             <div id="InnerSection6">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/duelling.png" alt="Icon of two duelling pistols."/>
+                        <img src="images/duelling.png" alt="Icon of two duelling pistols." />
                         <h2>Duelling</h2>
                         <p>
                             In the 1600s the French invented the bayonet but only in the 1700s it was used by other countries.
@@ -217,7 +217,7 @@
                             Shoot the target before it kills you! Hurry up!
                         </p>
                         <section class="target-section">
-                            <img src="images/TargetDuel.png" alt="Icon of a person with a gun ready to fire at you."/>
+                            <img src="images/TargetDuel.png" alt="Icon of a person with a gun ready to fire at you." />
                             <section class="right-side-target">
                                 <span class="button" id="ShootButton">Shoot</span>
                                 <div id="TimerDivDuel"></div>
@@ -237,7 +237,7 @@
             <div id="InnerSection7">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/gatling-icon.png" alt="Icon of a gatling gun."/>
+                        <img src="images/gatling-icon.png" alt="Icon of a gatling gun." />
                         <h2>Guns</h2>
                         <p>
                             The breechloading concept developed in the late 1800s led to a very important advantage. Speed of loading.
@@ -256,7 +256,7 @@
                             If you want to shoot faster, you will have to click faster!
                         </p>
                         <span class="button" id="GatlingButton">Turn</span>
-                        <img id="BeforeTurn" src="images/GatlingGunGame.png" alt="Icon of a second gatling gun."/>
+                        <img id="BeforeTurn" src="images/GatlingGunGame.png" alt="Icon of a second gatling gun." />
                         <img id="AfterTurn" src="images/GatlingGunGame2.png" alt="Icon of a second gatling gun when turned." />
                     </section>
                 </section>
@@ -271,7 +271,7 @@
             <div id="InnerSection8">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/grenade.png" alt="Icon of a grenade."/>
+                        <img src="images/grenade.png" alt="Icon of a grenade." />
                         <h2>Advanced weaponry</h2>
                         <p>
                             A lot happened during the 1900s. Several wars and battles were fought throughout the century.
@@ -284,7 +284,7 @@
                         </p>
                     </section>
                     <section class="right-side">
-                        <img src="images/tank.png" alt="Icon of a tank."/>
+                        <img src="images/tank.png" alt="Icon of a tank." />
                         <h2>Combat vehicles</h2>
                         <p>
                             During World War One, armourd vehicles were first deployed. There was one problem though,
@@ -308,7 +308,7 @@
             <div id="InnerSection9">
                 <section class="ContentBox">
                     <section class="left-side">
-                        <img src="images/Robot.png" alt="Icon of a robot."/>
+                        <img src="images/Robot.png" alt="Icon of a robot." />
                         <h2>Robots</h2>
                         <p>
                             Starting in 1900, weaponry got very advanced very quickly. Tanks, fighter jets, grenades, snipers, flashbangs, ...
@@ -334,17 +334,10 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
     </div>
-
-    <script src="js/script.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="src/controller/CenturyController.js"></script>
+    <script src="js/scriptmini.js"></script>
 
 </body>
 </html>

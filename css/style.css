@@ -998,6 +998,7 @@ body {
 @media screen and (max-width: 1280px) {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section .right-side-defuse {
     width: 200px;
+    margin-right: 10px;
   }
 }
 #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section .right-side-defuse #TimerDiv {

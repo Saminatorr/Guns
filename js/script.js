@@ -4,7 +4,7 @@ function init() {
 
     getViewportData();
 
-    loadJSONFile();
+    //loadJSONFile();
 
     goToSection1();
 
@@ -12,36 +12,37 @@ function init() {
 
     getLocation();
 
-    //loadAudio();
-
+    loadAudio();
 }
 
 var fireworkAudio;
-function loadAudio()
-{
+var bombAudio;
+var duelAudio;
+function loadAudio() {
     fireworkAudio = new Audio('sound/firework.wav');
+    bombAudio = new Audio('sound/bombblast.wav');
+    duelAudio = new Audio('sound/duelshot.wav');
 }
 
+//function loadJSONFile() {
+//    $.ajax({
+//        type: "GET",
+//        url: "data.json",
+//        dataType: "json",
+//        success: function (data) {
+//            image = data.content.home.leftside.image;
+//            title = data.content.home.leftside.title;
+//            text = data.content.home.leftside.text;
+//            fillContent();
+//        }
+//    });
+//}
 
-function loadJSONFile() {
-    $.ajax({
-        type: "GET",
-        url: "data.json",
-        dataType: "json",
-        success: function (data) {
-            image = data.content.home.leftside.image;
-            title = data.content.home.leftside.title;
-            text = data.content.home.leftside.text;
-            fillContent();
-        }
-    });
-}
-
-function fillContent() {
-    document.getElementById("HomeImage").src = image;
-    document.getElementById("HomeTitle").innerHTML = title;
-    document.getElementById("HomeText").innerHTML = text;
-}
+//function fillContent() {
+//    document.getElementById("HomeImage").src = image;
+//    document.getElementById("HomeTitle").innerHTML = title;
+//    document.getElementById("HomeText").innerHTML = text;
+//}
 
 function getLocation() {
     var info = function (pos) {
@@ -49,7 +50,7 @@ function getLocation() {
             long = pos.coords.longitude,
             coords = lat + ', ' + long;
 
-        document.getElementById("GoogleMap").setAttribute('src', 'https://maps.google.be/?q=' + coords + '&z=17&output=embed')
+        document.getElementById("GoogleMap").setAttribute('src', 'https://maps.google.be/?q=' + coords + '&z=17&output=embed');
     }
 
     navigator.geolocation.getCurrentPosition(info);
@@ -180,12 +181,9 @@ function getViewportData() {
     $("#Section8").css({ 'width': widthScreen });
     $("#Section9").css({ 'height': heightScreen });
     $("#Section9").css({ 'width': widthScreen });
-    console.log(heightScreen);
-    console.log(widthScreen);
 }
 
 function goToSection1() {
-    console.log("zit in de click 1");
     $('html, body').animate({
         scrollTop: $("#Section1").offset().top
     }, 500);
@@ -206,7 +204,7 @@ function goToSection1() {
 
 function goToSection2() {
     $(".ExplosionImg").animate({ "opacity": "0" }, 50);
-    console.log("zit in de click 2");
+
     $('html, body').animate({
         scrollTop: $("#Section2").offset().top
     }, 500);
@@ -229,14 +227,13 @@ var musicOnFirework;
 function fireWorkLaunch() {
     $(".ExplosionImg").animate({ "opacity": "1" }, 200);
 
-    var myAudio = new Audio('sound/firework.wav');
     if (musicOnFirework == true) {
-        console.log("hij speelt al");
+
         return null;
     }
     else {
-        console.log("hij speelt nog niet");
-        myAudio.play();
+
+        fireworkAudio.play();
         musicOnFirework = true;
         myAudio.addEventListener('ended', function () {
             this.currentTime = 0;
@@ -247,7 +244,7 @@ function fireWorkLaunch() {
 }
 
 function goToSection3() {
-    console.log("zit in de click 3");
+
     $('html, body').animate({
         scrollTop: $("#Section3").offset().top
     }, 500);
@@ -291,16 +288,14 @@ function startTimerBomb() {
 }
 
 function bombSound() {
-    var myAudio = new Audio('sound/bombblast.wav');
-    myAudio.play();
-
+    bombAudio.play();
 }
 
 var isDefused = true;
 function defuseBomb() {
 
     if (isDefused == true) {
-        console.log("zit in de true");
+
         clearInterval(DefuseTimer);
         var para = document.createElement("p");
         var node = document.createTextNode("You stopped the bomb! Lucky you.");
@@ -312,7 +307,7 @@ function defuseBomb() {
 
 
 function goToSection4() {
-    console.log("zit in de click 4");
+
     $('html, body').animate({
         scrollTop: $("#Section4").offset().top
     }, 500);
@@ -332,7 +327,7 @@ function goToSection4() {
 }
 
 function goToSection5() {
-    console.log("zit in de click 5");
+
     $('html, body').animate({
         scrollTop: $("#Section5").offset().top
     }, 500);
@@ -353,7 +348,7 @@ function goToSection5() {
 }
 
 function goToSection6() {
-    console.log("zit in de click 6");
+
     $('html, body').animate({
         scrollTop: $("#Section6").offset().top
     }, 500);
@@ -392,8 +387,8 @@ function startTimerDuel() {
 
             document.getElementById("TimerDivDuel").appendChild(para);
 
-            var myAudio = new Audio('sound/duelshot.wav');
-            myAudio.play();
+
+            duelAudio.play();
             isShot = false;
         }
     }
@@ -414,7 +409,7 @@ function shootTarget() {
 }
 
 function goToSection7() {
-    console.log("zit in de click 7");
+
     $('html, body').animate({
         scrollTop: $("#Section7").offset().top
     }, 500);
@@ -432,7 +427,9 @@ function goToSection7() {
     clearInterval(DefuseTimer);
     clearInterval(TargetTimer);
 
+    $("#BeforeTurn").show();
     $("#AfterTurn").hide();
+    isTurned = true;
 
 }
 
@@ -450,13 +447,11 @@ function shootFaster() {
         isTurned = true;
     }
 
-    var myAudio = new Audio('sound/gunshot.wav');
-    myAudio.play();
-
+    var gunshotAudio = new Audio('sound/gunshot.wav');
+    gunshotAudio.play();
 }
 
 function goToSection8() {
-    console.log("zit in de click 8");
     $('html, body').animate({
         scrollTop: $("#Section8").offset().top
     }, 500);
@@ -473,12 +468,9 @@ function goToSection8() {
     pageCounter = 7;
     clearInterval(DefuseTimer);
     clearInterval(TargetTimer);
-
-    $("#AfterTurn").hide();
 }
 
 function goToSection9() {
-    console.log("zit in de click 9");
     $('html, body').animate({
         scrollTop: $("#Section9").offset().top
     }, 500);
@@ -508,10 +500,5 @@ function dropBomb() {
         para.appendChild(node);
         document.getElementById("BombSent").appendChild(para);
         isDropped = false;
-
-        /*console.log("voor de drop");
-        var myAudio = new Audio('sound/gunshot.wav');
-        myAudio.play();
-        console.log("na de drop");*/
     }
 }
