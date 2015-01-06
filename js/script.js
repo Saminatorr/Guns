@@ -11,17 +11,6 @@ function init() {
     listenToClicks();
 
     getLocation();
-
-    loadAudio();
-}
-
-var fireworkAudio;
-var bombAudio;
-var duelAudio;
-function loadAudio() {
-    fireworkAudio = new Audio('sound/firework.wav');
-    bombAudio = new Audio('sound/bombblast.wav');
-    duelAudio = new Audio('sound/duelshot.wav');
 }
 
 //function loadJSONFile() {
@@ -200,6 +189,9 @@ function goToSection1() {
     pageCounter = 0;
     clearInterval(DefuseTimer);
     clearInterval(TargetTimer);
+
+    $("#BeforeTurn").show();
+    $("#AfterTurn").hide();
 }
 
 function goToSection2() {
@@ -227,6 +219,8 @@ var musicOnFirework;
 function fireWorkLaunch() {
     $(".ExplosionImg").animate({ "opacity": "1" }, 200);
 
+    var fireworkAudio = new Audio('sound/firework.wav');
+
     if (musicOnFirework == true) {
 
         return null;
@@ -235,7 +229,7 @@ function fireWorkLaunch() {
 
         fireworkAudio.play();
         musicOnFirework = true;
-        myAudio.addEventListener('ended', function () {
+        fireworkAudio.addEventListener('ended', function () {
             this.currentTime = 0;
             musicOnFirework = false;
             $(".ExplosionImg").animate({ "opacity": "0" }, 300);
@@ -288,6 +282,7 @@ function startTimerBomb() {
 }
 
 function bombSound() {
+    bombAudio = new Audio('sound/bombblast.wav');
     bombAudio.play();
 }
 
@@ -387,7 +382,7 @@ function startTimerDuel() {
 
             document.getElementById("TimerDivDuel").appendChild(para);
 
-
+            duelAudio = new Audio('sound/duelshot.wav');
             duelAudio.play();
             isShot = false;
         }
