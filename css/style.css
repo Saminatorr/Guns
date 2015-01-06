@@ -137,6 +137,12 @@ body {
 .image-layout {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  .image-layout {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   .image-layout {
     margin: 10px;
@@ -162,6 +168,12 @@ body {
   font-weight: 200;
   margin: 10px 0 10px 0;
   padding: 0;
+}
+@media screen and (max-width: 1600px) {
+  .title-layout {
+    margin: 5px 0;
+    font-size: 35px;
+  }
 }
 @media screen and (max-width: 1500px) {
   .title-layout {
@@ -189,6 +201,12 @@ body {
   margin: 30px;
   color: #606060;
 }
+@media screen and (max-width: 1600px) {
+  .text-layout {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
+}
 @media screen and (max-width: 1500px) {
   .text-layout {
     margin: 10px 15px;
@@ -212,6 +230,11 @@ body {
   font-family: driveby;
   color: #464646;
   font-weight: 200;
+}
+@media screen and (max-width: 1600px) {
+  .timer-layout {
+    font-size: 130px;
+  }
 }
 @media screen and (max-width: 1500px) {
   .timer-layout {
@@ -353,6 +376,12 @@ body {
 #ContentWrapper .Sections #InnerSection1 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection1 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection1 .ContentBox .left-side img {
     margin: 10px;
@@ -379,6 +408,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection1 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection1 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -404,6 +439,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection1 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection1 .ContentBox .left-side p {
@@ -444,6 +485,12 @@ body {
 #ContentWrapper .Sections #InnerSection1 .ContentBox .right-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection1 .ContentBox .right-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection1 .ContentBox .right-side img {
     margin: 10px;
@@ -470,6 +517,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection1 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection1 .ContentBox .right-side h2 {
     margin: 5px 0;
@@ -495,6 +548,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection1 .ContentBox .right-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection1 .ContentBox .right-side p {
@@ -570,6 +629,12 @@ body {
 #ContentWrapper .Sections #InnerSection2 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection2 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection2 .ContentBox .left-side img {
     margin: 10px;
@@ -596,6 +661,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection2 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection2 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -621,6 +692,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection2 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection2 .ContentBox .left-side p {
@@ -700,6 +777,12 @@ body {
   padding: 0;
   font-size: 40px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side h2 {
     margin: 5px 0;
@@ -721,6 +804,11 @@ body {
 #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .ExplosionImg {
   margin: 50px 30px 30px 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .ExplosionImg {
+    margin: 30px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .ExplosionImg {
     margin: 20px;
@@ -734,6 +822,12 @@ body {
 #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .ExplosionImg img {
   height: 120px;
   margin: 15px 20px 15px 20px;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .ExplosionImg img {
+    height: 120px;
+    margin: 10px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .ExplosionImg img {
@@ -763,6 +857,11 @@ body {
 #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .FireworkLauncher img {
   height: 140px;
   margin: 10px 20px;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .FireworkLauncher img {
+    height: 120px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection2 .ContentBox .right-side #FireworkDiv .FireworkLauncher img {
@@ -830,6 +929,12 @@ body {
 #ContentWrapper .Sections #InnerSection3 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection3 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .left-side img {
     margin: 10px;
@@ -856,6 +961,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection3 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -881,6 +992,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection3 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .left-side p {
@@ -926,6 +1043,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side h2 {
     margin: 5px 0;
@@ -951,6 +1074,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side p {
@@ -979,6 +1108,11 @@ body {
   height: 360px;
   float: left;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section img {
+    height: 260px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section img {
     height: 240px;
@@ -1006,6 +1140,11 @@ body {
   font-family: driveby;
   color: #464646;
   font-weight: 200;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section .right-side-defuse #TimerDiv {
+    font-size: 130px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection3 .ContentBox .right-side .bomb-section .right-side-defuse #TimerDiv {
@@ -1076,6 +1215,12 @@ body {
 #ContentWrapper .Sections #InnerSection4 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection4 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection4 .ContentBox .left-side img {
     margin: 10px;
@@ -1102,6 +1247,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection4 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection4 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -1127,6 +1278,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection4 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection4 .ContentBox .left-side p {
@@ -1165,8 +1322,14 @@ body {
   }
 }
 #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side img {
-  margin: 10px;
   height: 150px;
+  margin: 10px;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side img {
+    height: 130px;
+    margin: 10px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side img {
@@ -1187,6 +1350,12 @@ body {
   font-weight: 200;
   margin: 10px 0 10px 0;
   padding: 0;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side h2 {
@@ -1214,6 +1383,12 @@ body {
   margin: 30px;
   color: #606060;
   margin: 10px 5px 5px 5px;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection4 .ContentBox .right-side p {
@@ -1289,6 +1464,12 @@ body {
 #ContentWrapper .Sections #InnerSection5 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection5 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection5 .ContentBox .left-side img {
     margin: 10px;
@@ -1315,6 +1496,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection5 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection5 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -1340,6 +1527,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection5 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection5 .ContentBox .left-side p {
@@ -1381,6 +1574,12 @@ body {
   margin: 5px;
   height: 80px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection5 .ContentBox .right-side img {
+    margin: 0;
+    height: 70px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection5 .ContentBox .right-side img {
     margin: 0;
@@ -1395,6 +1594,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
   font-size: 35px;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection5 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection5 .ContentBox .right-side h2 {
@@ -1422,6 +1627,12 @@ body {
   margin: 30px;
   color: #606060;
   margin: 10px 30px 10px 30px;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection5 .ContentBox .right-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection5 .ContentBox .right-side p {
@@ -1497,6 +1708,12 @@ body {
 #ContentWrapper .Sections #InnerSection6 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection6 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection6 .ContentBox .left-side img {
     margin: 10px;
@@ -1523,6 +1740,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection6 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection6 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -1548,6 +1771,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection6 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection6 .ContentBox .left-side p {
@@ -1593,6 +1822,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side h2 {
     margin: 5px 0;
@@ -1618,6 +1853,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side p {
@@ -1646,6 +1887,11 @@ body {
   height: 360px;
   float: left;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section img {
+    height: 260px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section img {
     height: 240px;
@@ -1667,6 +1913,11 @@ body {
   font-family: driveby;
   color: #464646;
   font-weight: 200;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section .right-side-target #TimerDivDuel {
+    font-size: 130px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection6 .ContentBox .right-side .target-section .right-side-target #TimerDivDuel {
@@ -1737,6 +1988,12 @@ body {
 #ContentWrapper .Sections #InnerSection7 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection7 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection7 .ContentBox .left-side img {
     margin: 10px;
@@ -1763,6 +2020,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection7 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection7 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -1788,6 +2051,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection7 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection7 .ContentBox .left-side p {
@@ -1829,6 +2098,11 @@ body {
   width: 330px;
   margin: 0 100px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side img {
+    width: 310px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side img {
     width: 250px;
@@ -1841,6 +2115,12 @@ body {
   font-weight: 200;
   margin: 10px 0 10px 0;
   padding: 0;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side h2 {
@@ -1867,6 +2147,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection7 .ContentBox .right-side p {
@@ -1948,6 +2234,12 @@ body {
 #ContentWrapper .Sections #InnerSection8 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection8 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection8 .ContentBox .left-side img {
     margin: 10px;
@@ -1974,6 +2266,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection8 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection8 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -1999,6 +2297,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection8 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection8 .ContentBox .left-side p {
@@ -2039,6 +2343,12 @@ body {
 #ContentWrapper .Sections #InnerSection8 .ContentBox .right-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection8 .ContentBox .right-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection8 .ContentBox .right-side img {
     margin: 10px;
@@ -2065,6 +2375,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection8 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection8 .ContentBox .right-side h2 {
     margin: 5px 0;
@@ -2090,6 +2406,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection8 .ContentBox .right-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection8 .ContentBox .right-side p {
@@ -2165,6 +2487,12 @@ body {
 #ContentWrapper .Sections #InnerSection9 .ContentBox .left-side img {
   margin: 30px;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection9 .ContentBox .left-side img {
+    margin: 10px;
+    height: 120px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection9 .ContentBox .left-side img {
     margin: 10px;
@@ -2191,6 +2519,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection9 .ContentBox .left-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection9 .ContentBox .left-side h2 {
     margin: 5px 0;
@@ -2216,6 +2550,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection9 .ContentBox .left-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection9 .ContentBox .left-side p {
@@ -2261,6 +2601,12 @@ body {
   margin: 10px 0 10px 0;
   padding: 0;
 }
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection9 .ContentBox .right-side h2 {
+    margin: 5px 0;
+    font-size: 35px;
+  }
+}
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection9 .ContentBox .right-side h2 {
     margin: 5px 0;
@@ -2286,6 +2632,12 @@ body {
   letter-spacing: 1px;
   margin: 30px;
   color: #606060;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection9 .ContentBox .right-side p {
+    margin: 10px 15px;
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection9 .ContentBox .right-side p {
@@ -2317,6 +2669,11 @@ body {
   width: 100%;
   height: 240px;
   border-width: 0;
+}
+@media screen and (max-width: 1600px) {
+  #ContentWrapper .Sections #InnerSection9 .ContentBox .right-side #Location iframe {
+    height: 220px;
+  }
 }
 @media screen and (max-width: 1500px) {
   #ContentWrapper .Sections #InnerSection9 .ContentBox .right-side #Location iframe {
