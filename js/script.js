@@ -272,7 +272,7 @@ function startTimerBomb() {
         if (DefuseTime == 0) {
             clearInterval(DefuseTimer);
             var para = document.createElement("p");
-            var node = document.createTextNode("Boom! The bomb exploded and you are dead now.");
+            var node = document.createTextNode("Boom! The bomb exploded and now you are dead!");
             para.appendChild(node);
             document.getElementById("TimerDiv").appendChild(para);
             bombSound();
@@ -293,7 +293,7 @@ function defuseBomb() {
 
         clearInterval(DefuseTimer);
         var para = document.createElement("p");
-        var node = document.createTextNode("You stopped the bomb! Lucky you.");
+        var node = document.createTextNode("You stopped the bomb! Lucky you!");
         para.appendChild(node);
         document.getElementById("TimerDiv").appendChild(para);
         isDefused = false;
@@ -377,7 +377,7 @@ function startTimerDuel() {
             //boom
             clearInterval(TargetTimer);
             var para = document.createElement("p");
-            var node = document.createTextNode("Oh no, he shot you! You are dead now.");
+            var node = document.createTextNode("Oh no, he shot you! Now you are dead!");
             para.appendChild(node);
 
             document.getElementById("TimerDivDuel").appendChild(para);

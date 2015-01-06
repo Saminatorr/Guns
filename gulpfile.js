@@ -6,9 +6,4 @@ gulp.task('minify', function () {
         .pipe(uglify())
         .pipe(gulp.dest('minjs'));
 
-    gulp.src('src/controller/*')
-        .pipe(uglify())
-        .pipe(gulp.dest('minjs'));
-
-
 })
